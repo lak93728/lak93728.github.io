@@ -1,129 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trivana</title>
-  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  
-  <div class="banner-image"></div>
-
- 
-
-  <div class="page">
-    <div class="top-section">
-      <div class="top-bar">
-        <div class="search">
-          <input type="text" placeholder="Search" />
-        </div>
-
-        <div class="content-box">
-      <h1>Explore Central Pennsylvania</h1>
-      <p>Check out these must see spots and activities in Central Pennsylvania!</p>
-    </div>
-  </div>
-
-  <div class="group-fun-heading">Group Fun</div>
-
-  <div class="outdoorescapes">Outdoor Escapes</div>
-
-  <div class="historyandheritage">History and Heritage</div>
-
-        <div class="logo">
-          <img src="images/trivana.png" alt="Trivana Logo">
-        </div>
-
-        <div class="right-buttons">
-          <button class="contact">Contact</button>
-          <div class="menu">
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trivana</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@100;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- New Header -->
+    <header class="flex">
+      <div id="search">
+        <input type="text" placeholder="Search" />
       </div>
 
+      <div id="logo">
+        <a href="#"><img src="images/trivana.png" alt="Trivana Logo" /></a>
+      </div>
+
+      <div id="contact">
+        <button class="contact">Contact</button>
+        <div class="menu">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section with Banner -->
+    <div id="hero">
+      <div class="hero-banner"></div>
+      <div class="content-box">
+        <h1>Explore Central Pennsylvania</h1>
+        <p>
+          Check out these must see spots and activities in Central Pennsylvania!
+        </p>
+      </div>
+    </div>
+
+    <!-- Section Headings -->
+    <div class="group-fun-heading">Group Fun</div>
+    <div class="outdoorescapes">Outdoor Escapes</div>
+    <div class="historyandheritage">History and Heritage</div>
+
+    <!-- Card Grid -->
+    <div class="container"></div>
+    <div class="card-grid">
+      <!-- Cards go here (unchanged) -->
+    </div>
+  </body>
+     <!---->
+
+        <div class="group-fun-heading">Group Fun</div>
+
+        <div class="outdoorescapes">Outdoor Escapes</div>
+
+        <div class="historyandheritage">History and Heritage</div>
 
       <div class="container"></div>
 
-      <div class="card-grid">
-  <div class="card">
-    <img class="img" src="images/hersheypark.jpg" alt="Hershey Park">
-    <h4 class="heading">Hershey Park</h4>
-    <p class="description">A renowned amusement park featuring exciting rides, live entertainment, and an opportunity to learn about chocolate-making at Hershey's Chocolate World.</p>
-    <div class="button">Website</div>
+<div class="card-grid">
+  <div class="card card-group-1">
+    <img class="img" src="images/hersheypark.jpg" alt="Hershey Park" />
+    <div class="card-text">
+      <h4>Hershey Park</h4>
+      <p class="description">
+        A renowned amusement park featuring exciting rides, live entertainment, and an opportunity to learn about chocolate-making at Hershey's Chocolate World.
+      </p>
+      <div class="button">Read More</div>
+    </div>
   </div>
 
-  <div class="card">
-    <img class="img" src="images/centralmarket.jpg" alt="Central Market York">
-    <h4 class="heading">Central Market York</h4>
-    <p class="description">The oldest continuously operating farmers' market in the U.S., offering a bustling atmosphere, local produce, crafts, and diverse food vendors.</p>
-    <div class="button">Website</div>
+  <div class="card card-group-2">
+    <img class="img" src="images/centralmarket.jpg" alt="Central Market York" />
+    <div class="card-text">
+      <h4>Central Market York</h4>
+      <p class="description">
+        The oldest continuously operating farmers' market in the U.S., offering a bustling atmosphere, local produce, crafts, and diverse food vendors.
+      </p>
+      <div class="button">Read More</div>
+    </div>
   </div>
 
-  <div class="card">
-    <img class="img" src="images/lewisburg.jpg" alt="Lewisburg">
-    <h4 class="heading">Lewisburg</h4>
-    <p class="description">A charming small town known for its historic downtown, boutique shops, galleries, and attractions like the Lewisburg Farmers Market and Packwood House Museum.</p>
-    <div class="button">Website</div>
-  </div>
-  <div class="card">
-    <img class="img" src="images/raystown.jpg" alt="Raystown Lake">
-    <h4 class="heading">Raystown Lake</h4>
-    <p class="description">A scenic reservoir near Huntingdon, offering boating, fishing, hiking, and camping amid picturesque landscapes and water activities.</p>
-    <div class="button">Website</div>
+  <div class="card card-group-3">
+    <img class="img" src="images/lewisburg.jpg" alt="Lewisburg" />
+    <div class="card-text">
+      <h4>Lewisburg</h4>
+      <p class="description">
+        A charming small town known for its historic downtown, boutique shops, galleries, and attractions like the Lewisburg Farmers Market and Packwood House Museum.
+      </p>
+      <div class="button">Read More</div>
+    </div>
   </div>
 
-  <div class="card">
-    <img class="img" src="images/statepark.jpg" alt="Worlds End State Park">
-    <h4 class="heading">Worlds End State Park</h4>
-    <p class="description">Situated in the Endless Mountains, this park is known for its rugged beauty, with hiking trails, waterfalls, and breathtaking views of the Loyalsock Creek Gorge.</p>
-    <div class="button">Website</div>
+  <div class="card card-group-4">
+    <img class="img" src="images/raystown.jpg" alt="Raystown Lake" />
+    <div class="card-text">
+      <h4>Raystown Lake</h4>
+      <p class="description">
+        A scenic reservoir near Huntingdon, offering boating, fishing, hiking, and camping amid picturesque landscapes and water activities.
+      </p>
+      <div class="button">Read More</div>
+    </div>
   </div>
 
-  <div class="card">
-    <img class="img" src="images/grandcanyon.jpg" alt="Pennsylvania Grand Canyon">
-    <h4 class="heading">Pennsylvania Grand Canyon</h4>
-    <p class="description">Also known as Pine Creek Gorge, this natural wonder features stunning vistas, hiking trails, and opportunities for outdoor recreation.</p>
-    <div class="button">Website</div>
-  </div>
-  
-  <div class="card">
-    <img class="img" src="images/military.jpg" alt="Gettysburg National Military Park">
-    <h4 class="heading">Gettysburg National Military Park</h4>
-    <p class="description">Site of the pivotal Battle of Gettysburg during the Civil War, offering guided tours, historic monuments, and a visitor center with exhibits.</p>
-    <div class="button">Website</div>
+  <div class="card card-group-1">
+    <img class="img" src="images/statepark.jpg" alt="Worlds End State Park" />
+    <div class="card-text">
+      <h4>Worlds End State Park</h4>
+      <p class="description">
+        Situated in the Endless Mountains, this park is known for its rugged beauty, with hiking trails, waterfalls, and breathtaking views of the Loyalsock Creek Gorge.
+      </p>
+      <div class="button">Read More</div>
+    </div>
   </div>
 
-  <div class="card">
-    <img class="img" src="images/capitol.jpg" alt="Pennsylvania State Capitol">
-    <h4 class="heading">Pennsylvania State Capitol</h4>
-    <p class="description">An impressive architectural gem in Harrisburg showcasing exquisite artwork, stunning interiors, and guided tours to learn about the state's government and history.</p>
-    <div class="button">Website</div>
+  <div class="card card-group-2">
+    <img class="img" src="images/grandcanyon.jpg" alt="Pennsylvania Grand Canyon" />
+    <div class="card-text">
+      <h4>Pennsylvania Grand Canyon</h4>
+      <p class="description">
+        Also known as Pine Creek Gorge, this natural wonder features stunning vistas, hiking trails, and opportunities for outdoor recreation.
+      </p>
+      <div class="button">Read More</div>
+    </div>
   </div>
 
-  <div class="card">
-    <img class="img" src="images/railroad.jpg" alt="Railroad Museum of Pennsylvania">
-    <h4 class="heading">Railroad Museum of Pennsylvania</h4>
-    <p class="description">Located in Strasburg, this museum boasts an extensive collection of vintage locomotives, rail cars, and exhibits, showcasing the rich history of railroading.</p>
-    <div class="button">Website</div>
+  <div class="card card-group-3">
+    <img class="img" src="images/military.jpg" alt="Gettysburg National Military Park" />
+    <div class="card-text">
+      <h4>Gettysburg National Military Park</h4>
+      <p class="description">
+        Site of the pivotal Battle of Gettysburg during the Civil War, offering guided tours, historic monuments, and a visitor center with exhibits.
+      </p>
+      <div class="button">Read More</div>
+    </div>
+  </div>
+
+  <div class="card card-group-4">
+    <img class="img" src="images/capitol.jpg" alt="Pennsylvania State Capitol" />
+    <div class="card-text">
+      <h4>Pennsylvania State Capitol</h4>
+      <p class="description">
+        An impressive architectural gem in Harrisburg showcasing exquisite artwork, stunning interiors, and guided tours to learn about the state's government and history.
+      </p>
+      <div class="button">Read More</div>
+    </div>
+  </div>
+
+  <div class="card card-group-1">
+    <img class="img" src="images/railroad.jpg" alt="Railroad Museum of Pennsylvania" />
+    <div class="card-text">
+      <h4>Railroad Museum of Pennsylvania</h4>
+      <p class="description">
+        Located in Strasburg, this museum boasts an extensive collection of vintage locomotives, rail cars, and exhibits, showcasing the rich history of railroading.
+      </p>
+      <div class="button">Read More</div>
+    </div>
   </div>
 </div>
-
-    </div>
-
-  
-
-
-
-
-
-    \
-
-
-</body>
-</html>
