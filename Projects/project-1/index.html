@@ -8,10 +8,14 @@
       href="https://fonts.googleapis.com/css2?family=Jost:wght@100;300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- New Header -->
+    <!-- Header -->
     <header class="flex">
       <div id="search">
         <input type="text" placeholder="Search" />
@@ -31,7 +35,7 @@
       </div>
     </header>
 
-    <!-- Hero Section with Banner -->
+    <!-- Hero Section -->
     <div id="hero">
       <div class="hero-banner"></div>
       <div class="content-box">
@@ -48,118 +52,202 @@
     <div class="historyandheritage">History and Heritage</div>
 
     <!-- Card Grid -->
-    <div class="container"></div>
     <div class="card-grid">
-      <!-- Cards go here (unchanged) -->
-    </div>
-  </body>
-     <!---->
+      <!-- Card 1 -->
+      <div class="card card-group-1">
+        <div class="card-image">
+          <a href="https://www.hersheypark.com/" target="_blank">
+            <img src="images/hersheypark.jpg" alt="Hershey Park" />
+          </a>
+          <button class="favorite-btn" aria-label="Add to favorites">
+            <i class="fa-regular fa-heart heart-icon"></i>
+          </button>
+        </div>
+        <div class="card-text">
+          <h4>Hershey Park</h4>
+          <p class="description">
+            A renowned amusement park featuring exciting rides, live entertainment, and an opportunity to learn about chocolate-making at Hershey's Chocolate World.
+          </p>
+          <a href="https://www.hersheypark.com/" target="_blank" class="read-more">Read More</a>
+        </div>
+      </div>
 
-        <div class="group-fun-heading">Group Fun</div>
+      <!-- Card 2 -->
+      <div class="card card-group-2">
+        <div class="card-image">
+          <a href="https://www.centralmarketyork.com/" target="_blank">
+            <img src="images/centralmarket.jpg" alt="Central Market York" />
+          </a>
+          <button class="favorite-btn" aria-label="Add to favorites">
+            <i class="fa-regular fa-heart heart-icon"></i>
+          </button>
+        </div>
+        <div class="card-text">
+          <h4>Central Market York</h4>
+          <p class="description">
+            The oldest continuously operating farmers' market in the U.S., offering a bustling atmosphere, local produce, crafts, and diverse food vendors.
+          </p>
+          <a href="https://www.centralmarketyork.com/" target="_blank" class="read-more">Read More</a>
+        </div>
+      </div>
 
-        <div class="outdoorescapes">Outdoor Escapes</div>
+      <!-- Card 3 -->
+      <div class="card card-group-3">
+        <div class="card-image">
+          <a href="https://www.lewisburgpa.com/" target="_blank">
+            <img src="images/lewisburg.jpg" alt="Lewisburg" />
+          </a>
+          <button class="favorite-btn" aria-label="Add to favorites">
+            <i class="fa-regular fa-heart heart-icon"></i>
+          </button>
+        </div>
+        <div class="card-text">
+          <h4>Lewisburg</h4>
+          <p class="description">
+            A charming small town known for its historic downtown, boutique shops, galleries, and attractions like the Lewisburg Farmers Market and Packwood House Museum.
+          </p>
+          <a href="https://www.lewisburgpa.com/" target="_blank" class="read-more">Read More</a>
+        </div>
+      </div>
 
-        <div class="historyandheritage">History and Heritage</div>
+      <!-- Card 4 -->
+      <div class="card card-group-4">
+        <div class="card-image">
+          <a href="https://www.nab.usace.army.mil/Missions/Dams-Recreation/Raystown/" target="_blank">
+            <img src="images/raystown.jpg" alt="Raystown Lake" />
+          </a>
+          <button class="favorite-btn" aria-label="Add to favorites">
+            <i class="fa-regular fa-heart heart-icon"></i>
+          </button>
+        </div>
+        <div class="card-text">
+          <h4>Raystown Lake</h4>
+          <p class="description">
+            A scenic reservoir near Huntingdon, offering boating, fishing, hiking, and camping amid picturesque landscapes and water activities.
+          </p>
+          <a href="https://www.nab.usace.army.mil/Missions/Dams-Recreation/Raystown/" target="_blank" class="read-more">Read More</a>
+        </div>
+      </div>
 
-      <div class="container"></div>
+      <!-- Card 5 -->
+      <div class="card card-group-1">
+        <div class="card-image">
+          <a href="https://www.dcnr.pa.gov/StateParks/FindAPark/WorldsEndStatePark/" target="_blank">
+            <img src="images/statepark.jpg" alt="Worlds End State Park" />
+          </a>
+          <button class="favorite-btn" aria-label="Add to favorites">
+            <i class="fa-regular fa-heart heart-icon"></i>
+          </button>
+        </div>
+        <div class="card-text">
+          <h4>Worlds End State Park</h4>
+          <p class="description">
+            Situated in the Endless Mountains, this park is known for its rugged beauty, with hiking trails, waterfalls, and breathtaking views of the Loyalsock Creek Gorge.
+          </p>
+          <a href="https://www.dcnr.pa.gov/StateParks/FindAPark/WorldsEndStatePark/" target="_blank" class="read-more">Read More</a>
+        </div>
+      </div>
 
-<div class="card-grid">
-  <div class="card card-group-1">
-    <img class="img" src="images/hersheypark.jpg" alt="Hershey Park" />
-    <div class="card-text">
-      <h4>Hershey Park</h4>
-      <p class="description">
-        A renowned amusement park featuring exciting rides, live entertainment, and an opportunity to learn about chocolate-making at Hershey's Chocolate World.
-      </p>
-      <div class="button">Read More</div>
-    </div>
-  </div>
+            <!-- Card 6 -->
+      <div class="card card-group-2">
+        <div class="card-image">
+          <a href="https://www.pa.gov/agencies/dcnr/recreation/where-to-go/state-parks/find-a-park/colton-point-state-park" target="_blank">
+            <img src="images/grandcanyon.jpg" alt="Pennsylvania Grand Canyon" />
+          </a>
+          <button class="favorite-btn" aria-label="Add to favorites">
+            <i class="fa-regular fa-heart heart-icon"></i>
+          </button>
+        </div>
+        <div class="card-text">
+          <h4>Pennsylvania Grand Canyon</h4>
+          <p class="description">
+            Also known as Pine Creek Gorge, this natural wonder features stunning vistas, hiking trails, and opportunities for outdoor recreation.
+          </p>
+          <a href="https://www.pa.gov/agencies/dcnr/recreation/where-to-go/state-parks/find-a-park/colton-point-state-park" target="_blank" class="read-more">Read More</a>
+        </div>
+      </div>
 
-  <div class="card card-group-2">
-    <img class="img" src="images/centralmarket.jpg" alt="Central Market York" />
-    <div class="card-text">
-      <h4>Central Market York</h4>
-      <p class="description">
-        The oldest continuously operating farmers' market in the U.S., offering a bustling atmosphere, local produce, crafts, and diverse food vendors.
-      </p>
-      <div class="button">Read More</div>
-    </div>
-  </div>
+      <!-- Card 7 -->
+      <div class="card card-group-3">
+        <div class="card-image">
+          <a href="https://www.nps.gov/gett/index.htm" target="_blank">
+            <img src="images/military.jpg" alt="Gettysburg National Military Park" />
+          </a>
+          <button class="favorite-btn" aria-label="Add to favorites">
+            <i class="fa-regular fa-heart heart-icon"></i>
+          </button>
+        </div>
+        <div class="card-text">
+          <h4>Gettysburg National Military Park</h4>
+          <p class="description">
+            Site of the pivotal Battle of Gettysburg during the Civil War, offering guided tours, historic monuments, and a visitor center with exhibits.
+          </p>
+          <a href="https://www.nps.gov/gett/index.htm" target="_blank" class="read-more">Read More</a>
+        </div>
+      </div>
 
-  <div class="card card-group-3">
-    <img class="img" src="images/lewisburg.jpg" alt="Lewisburg" />
-    <div class="card-text">
-      <h4>Lewisburg</h4>
-      <p class="description">
-        A charming small town known for its historic downtown, boutique shops, galleries, and attractions like the Lewisburg Farmers Market and Packwood House Museum.
-      </p>
-      <div class="button">Read More</div>
-    </div>
-  </div>
+      <!-- Card 8 -->
+      <div class="card card-group-4">
+        <div class="card-image">
+          <a href="https://www.pacapitol.com/" target="_blank">
+            <img src="images/capitol.jpg" alt="Pennsylvania State Capitol" />
+          </a>
+          <button class="favorite-btn" aria-label="Add to favorites">
+            <i class="fa-regular fa-heart heart-icon"></i>
+          </button>
+        </div>
+        <div class="card-text">
+          <h4>Pennsylvania State Capitol</h4>
+          <p class="description">
+            An impressive architectural gem in Harrisburg showcasing exquisite artwork, stunning interiors, and guided tours to learn about the state's government and history.
+          </p>
+          <a href="https://www.pacapitol.com/" target="_blank" class="read-more">Read More</a>
+        </div>
+      </div>
 
-  <div class="card card-group-4">
-    <img class="img" src="images/raystown.jpg" alt="Raystown Lake" />
-    <div class="card-text">
-      <h4>Raystown Lake</h4>
-      <p class="description">
-        A scenic reservoir near Huntingdon, offering boating, fishing, hiking, and camping amid picturesque landscapes and water activities.
-      </p>
-      <div class="button">Read More</div>
-    </div>
-  </div>
+      <!-- Card 9 -->
+      <div class="card card-group-1">
+        <div class="card-image">
+          <a href="https://www.rrmuseumpa.org/" target="_blank">
+            <img src="images/railroad.jpg" alt="Railroad Museum of Pennsylvania" />
+          </a>
+          <button class="favorite-btn" aria-label="Add to favorites">
+            <i class="fa-regular fa-heart heart-icon"></i>
+          </button>
+        </div>
+        <div class="card-text">
+          <h4>Railroad Museum of Pennsylvania</h4>
+          <p class="description">
+            Located in Strasburg, this museum boasts an extensive collection of vintage locomotives, rail cars, and exhibits, showcasing the rich history of railroading.
+          </p>
+          <a href="https://www.rrmuseumpa.org/" target="_blank" class="read-more">Read More</a>
+        </div>
+      </div>
+    </div> <!-- End of .card-grid -->
 
-  <div class="card card-group-1">
-    <img class="img" src="images/statepark.jpg" alt="Worlds End State Park" />
-    <div class="card-text">
-      <h4>Worlds End State Park</h4>
-      <p class="description">
-        Situated in the Endless Mountains, this park is known for its rugged beauty, with hiking trails, waterfalls, and breathtaking views of the Loyalsock Creek Gorge.
-      </p>
-      <div class="button">Read More</div>
-    </div>
-  </div>
+    <!-- Footer Line -->
+    <div class="footer-line"></div>
 
-  <div class="card card-group-2">
-    <img class="img" src="images/grandcanyon.jpg" alt="Pennsylvania Grand Canyon" />
-    <div class="card-text">
-      <h4>Pennsylvania Grand Canyon</h4>
-      <p class="description">
-        Also known as Pine Creek Gorge, this natural wonder features stunning vistas, hiking trails, and opportunities for outdoor recreation.
-      </p>
-      <div class="button">Read More</div>
-    </div>
-  </div>
-
-  <div class="card card-group-3">
-    <img class="img" src="images/military.jpg" alt="Gettysburg National Military Park" />
-    <div class="card-text">
-      <h4>Gettysburg National Military Park</h4>
-      <p class="description">
-        Site of the pivotal Battle of Gettysburg during the Civil War, offering guided tours, historic monuments, and a visitor center with exhibits.
-      </p>
-      <div class="button">Read More</div>
-    </div>
-  </div>
-
-  <div class="card card-group-4">
-    <img class="img" src="images/capitol.jpg" alt="Pennsylvania State Capitol" />
-    <div class="card-text">
-      <h4>Pennsylvania State Capitol</h4>
-      <p class="description">
-        An impressive architectural gem in Harrisburg showcasing exquisite artwork, stunning interiors, and guided tours to learn about the state's government and history.
-      </p>
-      <div class="button">Read More</div>
-    </div>
-  </div>
-
-  <div class="card card-group-1">
-    <img class="img" src="images/railroad.jpg" alt="Railroad Museum of Pennsylvania" />
-    <div class="card-text">
-      <h4>Railroad Museum of Pennsylvania</h4>
-      <p class="description">
-        Located in Strasburg, this museum boasts an extensive collection of vintage locomotives, rail cars, and exhibits, showcasing the rich history of railroading.
-      </p>
-      <div class="button">Read More</div>
-    </div>
-  </div>
+    <div class="footer-icons">
+  <img src="images/instagram-icon.png" alt="Icon 1" />
+  <img src="images/facebook-icon.png" alt="Icon 2" />
+  <img src="images/tiktok-icon.png" alt="Icon 3" />
 </div>
+
+<div class="footer-text">© 2025 TRIVANA. All Rights Reserved</div>
+
+    <!-- Spacer to allow scrolling -->
+    <div style="height: 200px;"></div>
+
+    <!-- JavaScript for Heart Toggle -->
+    <script>
+      document.querySelectorAll('.favorite-btn').forEach(button => {
+        button.addEventListener('click', () => {
+          const icon = button.querySelector('.heart-icon');
+          icon.classList.toggle('fa-regular');
+          icon.classList.toggle('fa-solid');
+        });
+      });
+    </script>
+  </body>
+</html>
