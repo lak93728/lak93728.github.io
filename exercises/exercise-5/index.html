@@ -1,64 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Page</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fun South Korea Facts</title>
   <style>
     body {
       margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fffde7; /* pale yellow */
+      color: #333;
     }
 
-    /* Navigation */
+    header {
+      background-color: #ffe4e1; /* pale pink */
+      padding: 1em;
+      text-align: center;
+    }
+
     nav {
       display: flex;
-      justify-content: space-between;
-      padding: 10px;
+      justify-content: center;
+      gap: 1em;
+      margin-top: 0.5em;
     }
 
     nav a {
-      margin-left: 10px;
+      text-decoration: none;
+      color: #cc6699; /* darker pink */
+      padding: 0.5em 1em;
+      border-radius: 5px;
+      transition: background-color 0.3s;
     }
 
-    /* Layout */
+    nav a:hover {
+      background-color: #b94d7b; /* deeper pink */
+      color: white;
+    }
+
     .container {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 10px;
-      padding: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 2em;
+      gap: 2em;
+    }
+
+    .column {
+      flex: 1 1 250px;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+      display: block;
+      margin: 0 auto;
     }
 
     /* Media Query */
-    @media (max-width: 600px) {
-      .container {
-        grid-template-columns: 1fr;
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
       }
 
-      nav {
+      .container {
         flex-direction: column;
       }
     }
   </style>
 </head>
 <body>
-
-  <nav>
-    <div>Site Title</div>
-    <div>
+  <header>
+    <h1>Fun South Korea Facts</h1>
+    <nav>
       <a href="#">Home</a>
       <a href="#">About</a>
-    </div>
-  </nav>
+    </nav>
+  </header>
 
   <div class="container">
-    <div>
-      <h1>Heading</h1>
-      <p>Some text goes here.</p>
+    <div class="column">
+      <h2>Fast Facts</h2>
+      <ul>
+        <li>South Korea has the fastest internet in the world.</li>
+        <li>It’s home to 12 UNESCO World Heritage Sites.</li>
+        <li>Kimchi is eaten with almost every meal!</li>
+      </ul>
     </div>
-    <div>
-      <p>Sidebar content.</p>
+    <div class="column">
+      <h2>Culture & Travel</h2>
+      <ul>
+        <li>Seoul has a population of over 9 million people.</li>
+        <li>Public transportation is clean and efficient.</li>
+        <li>K-pop and Korean dramas are global phenomena.</li>
+      </ul>
+    </div>
+    <div class="column">
+    <img src="images/southkorea.jpg" alt="South Korea" />
     </div>
   </div>
 
+  <script>
+
+    window.onload = function() {
+      console.log("Welcome to your South Korea travel page!");
+    };
+  </script>
 </body>
 </html>
