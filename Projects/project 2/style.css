@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  background-color: #none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.frame {
+  width: 1032px;
+  height: 851px;
+  background-color: #3B193D;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.top-banner {
+  width: 100%;
+  height: 152px;
+  background-color: #1E1E1E;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+}
