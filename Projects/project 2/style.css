@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Judson&display=swap');
+
 body {
   margin: 0;
-  background-color: #none;
+  background-color: #000000; /* Outside the frame */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,8 +10,8 @@ body {
 }
 
 .frame {
-  width: 1032px;
-  height: 851px;
+  width: 971px;
+  height: 1109px;
   background-color: #3B193D;
   display: flex;
   flex-direction: column;
@@ -18,9 +20,36 @@ body {
 }
 
 .top-banner {
-  width: 100%;
-  height: 152px;
+  height: 114px;
   background-color: #1E1E1E;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 44px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  z-index: 2;
+  border-bottom: 2px solid #F7921E; /* TEMP: helps confirm visibility */
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-button {
+  width: 130px;
+  height: 57px;
+  background-color: #F7921E;
+  color: #1E1E1E;
+  font-family: 'Judson', serif;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .content {
