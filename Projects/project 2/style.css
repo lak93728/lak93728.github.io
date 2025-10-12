@@ -2,7 +2,7 @@
 
 body {
   margin: 0;
-  background-color: #000000; /* Outside the frame */
+  background-color: #000000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,7 +16,7 @@ body {
 
 .frame {
   width: 1032px;
-  height: 800px; /* Adjusted to fit screen and keep banner visible */
+  height: 800px;
   background-color: #3B193D;
   display: flex;
   flex-direction: column;
@@ -28,7 +28,7 @@ body {
   background-color: #1E1E1E;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* logo left, buttons right */
+  justify-content: space-between;
   padding: 0 35px;
   flex-shrink: 0;
   box-sizing: border-box;
@@ -40,7 +40,7 @@ body {
   height: 119px;
   object-fit: contain;
   margin-top: 39px;
-  margin-left: -44px; /* Adjust this value as needed */
+  margin-left: -44px;
 }
 
 .nav-buttons {
