@@ -133,7 +133,7 @@ header {
   box-shadow: 0 0 6px rgba(255, 255, 255, 0.2);
 }
 
-/* ✅ FOOTER STYLES */
+
 footer {
   margin-top: 60px;
   padding-bottom: 20px;
@@ -169,4 +169,16 @@ footer {
   color: white;
   opacity: 0.75;
   margin: 0;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.page-wrapper {
+  min-height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
 }
