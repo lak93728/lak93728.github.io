@@ -1,29 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Project 2</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="frame">
-    <div class="top-banner">
-      <div class="logo">
-        <img src="images/diyspot.png" alt="DIY Spot logo" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DIY Spot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Judson&family=Aclonica&family=Inter&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div id="logo">
+        <a href="index.html"><img src="images/diyspot.svg" alt="DIY Spot logo" /></a>
       </div>
+      <nav id="main-nav">
+        <ul>
+          <li><a href="#" class="disabled">← Back</a></li>
+          <li><a href="supplies.html">Next →</a></li>
+        </ul>
+      </nav>
+    </header>
 
-      <div class="nav-buttons">
-        <button class="nav-button back disabled"><span>← Back</span></button>
-        <a href="supplies.html" class="nav-link">
-          <button class="nav-button next"><span>Next →</span></button>
+    <!-- CONTENT -->
+    <div id="content">
+      <h1 class="highlight-heading">DIY Halloween Ghost Decorations</h1>
+      <p class="intro-paragraph">
+        Transform old book pages into ghosts. Perfect for a gentle, bookish Halloween aesthetic that combines the charm of vintage paper with spooky season vibes.
+      </p>
+      <div class="image-wrapper">
+        <img src="images/cover.jpg" alt="Cover image" class="cover-image" />
+      </div>
+      <p class="description-paragraph">
+        People describe this craft as easy, budget friendly, and fun.
+      </p>
+      <div class="start-button-wrapper">
+        <a href="supplies.html" class="start-button">Start Creating</a>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-left">
+        <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+          <img src="https://img.icons8.com/ios/50/ffffff/instagram-new--v1.png" alt="Instagram" class="footer-icon" />
+        </a>
+        <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+          <img src="https://img.icons8.com/ios/50/ffffff/facebook-circled--v1.png" alt="Facebook" class="footer-icon" />
         </a>
       </div>
-    </div>
-
-    <div class="content">
-      <p style="color:white;">text</p>
-    </div>
-  </div>
-</body>
+      <div class="footer-right">
+        <p>&copy; 2025 DIY SPOT. All Rights Reserved</p>
+      </div>
+    </footer>
+  </body>
 </html>
