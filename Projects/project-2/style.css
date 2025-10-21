@@ -84,7 +84,7 @@ header {
 .intro-paragraph {
   font-family: 'Judson', serif;
   font-size: 25px;
-  width: 700px;
+  width: 650px;
   margin: -9px auto 0 auto;
   line-height: 1.4;
 }
@@ -94,7 +94,7 @@ header {
   margin-top: 31px;
 }
 
-.cover-image {
+.images {
   width: 650px;
   height: 430px;
   display: inline-block;
