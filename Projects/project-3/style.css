@@ -1,4 +1,3 @@
-/* Base styles */
 body {
   background-color: #ffffff;
   margin: 0;
@@ -13,23 +12,21 @@ html, body {
 }
 
 .page-wrapper {
-  min-height: 100vh;
+  min-height: 1200px;
   display: flex;
   flex-direction: column;
 }
 
-/* Header */
 header {
   background-color: #291C17;
   height: 148px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 40px;
-  /* Removed sticky positioning */
+  padding: 0 80px;
 }
 
-.header-left {
+.branding-area {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -53,22 +50,20 @@ header {
   line-height: 1;
 }
 
-.header-right ul {
-  list-style: none;
+.nav-area ul {
   display: flex;
   gap: 40px;
   margin: 0;
   padding: 0;
 }
 
-.header-right a {
+.nav-area a {
   text-decoration: none;
   font-family: 'Pontano Sans', sans-serif;
   font-size: 35px;
   color: white;
 }
 
-/* Hero image */
 .hero-image {
   width: 100%;
 }
@@ -89,7 +84,6 @@ header {
   display: block;
 }
 
-/* Overlay box */
 .overlay-box {
   position: absolute;
   width: 838px;
@@ -100,28 +94,49 @@ header {
   align-items: center;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    height: auto;
-    padding: 20px;
-  }
+.overlay-text {
+  font-size: 64px;
+  font-family: 'Tenor Sans', sans-serif;
+  color: #291C17;
+  text-align: center;
+  margin: 0;
+  line-height: 1.2;
+}
 
-  .header-right ul {
-    flex-direction: column;
-    gap: 20px;
-    margin-top: 20px;
-  }
+.section-title {
+  margin-top: 49px;
+  margin-left: 80px;
+  font-size: 64px;
+  color: #291C17;
+  font-family: 'Tenor Sans', sans-serif;
+  line-height: 1.2;
+}
 
-  .site-title {
-    font-size: 45px;
-  }
+.image-row {
+  display: flex;
+  justify-content: space-between;
+  margin: -40px 80px 0 80px;
+  gap: 40px;
+}
 
-  .overlay-box {
-    width: 90%;
-    height: auto;
-    padding: 40px;
-  }
+.image-block {
+  width: calc((100% - 80px) / 3);
+  display: flex;
+  flex-direction: column;
+}
+
+.image-block img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+}
+
+.image-caption {
+  font-family: 'Pontano Sans', sans-serif;
+  font-size: 32px;
+  color: #291C17;
+  margin-top: 12px;
+  text-align: left;
 }
