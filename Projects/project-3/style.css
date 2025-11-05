@@ -50,18 +50,38 @@ header {
   line-height: 1;
 }
 
-.nav-area ul {
-  display: flex;
-  gap: 40px;
-  margin: 0;
-  padding: 0;
+#main-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #291C17;
+  padding: 20px 0;
 }
 
-.nav-area a {
+.nav-wrapper {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+#main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 40px;
+}
+
+#main-nav a {
   text-decoration: none;
   font-family: 'Pontano Sans', sans-serif;
   font-size: 35px;
   color: white;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#main-nav a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.2);
 }
 
 .hero-image {
