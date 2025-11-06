@@ -1,29 +1,58 @@
 body {
-  background-color: #ffffff;
   margin: 0;
   padding: 0;
+  background-color: #ffffff;
   font-family: 'Pontano Sans', sans-serif;
   color: #291C17;
   overflow-x: hidden;
 }
 
-html, body {
-  height: 100%;
-}
-
-.page-wrapper {
-  min-height: 1200px;
-  display: flex;
-  flex-direction: column;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 header {
   background-color: #291C17;
   height: 148px;
+}
+
+footer {
+  background-color: #9B9E70;
+  height: 318px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+footer p {
+  font-size: 18px;
+  color: #291C17;
+  font-family: 'Pontano Sans', sans-serif;
+  margin: 0;
+}
+
+main {
+  min-height: 500px;
+  margin-bottom: 0;
+}
+
+.row {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 20px 100px;
+}
+
+.flex {
+  display: flex;
+  gap: 40px;
+}
+
+.header-flex {
   justify-content: space-between;
-  padding: 0 80px;
+  align-items: center;
 }
 
 .branding-area {
@@ -50,19 +79,6 @@ header {
   line-height: 1;
 }
 
-#main-nav {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background-color: #291C17;
-  padding: 20px 0;
-}
-
-.nav-wrapper {
-  width: fit-content;
-  margin: 0 auto;
-}
-
 #main-nav ul {
   list-style: none;
   padding: 0;
@@ -73,19 +89,8 @@ header {
 
 #main-nav a {
   text-decoration: none;
-  font-family: 'Pontano Sans', sans-serif;
   font-size: 35px;
   color: white;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-#main-nav a:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 6px rgba(255, 255, 255, 0.2);
-}
-
-.hero-image {
-  width: 100%;
 }
 
 .image-crop {
@@ -117,6 +122,7 @@ header {
 .overlay-text {
   font-size: 64px;
   font-family: 'Tenor Sans', sans-serif;
+  font-weight: normal;
   color: #291C17;
   text-align: center;
   margin: 0;
@@ -124,39 +130,332 @@ header {
 }
 
 .section-title {
-  margin-top: 49px;
-  margin-left: 80px;
-  font-size: 64px;
-  color: #291C17;
+  font-size: 56px;
   font-family: 'Tenor Sans', sans-serif;
-  line-height: 1.2;
+  font-weight: normal;
+  color: #291C17;
+  margin-bottom: 20px;
 }
 
 .image-row {
   display: flex;
-  justify-content: space-between;
-  margin: -40px 80px 0 80px;
-  gap: 40px;
-}
-
-.image-block {
-  width: calc((100% - 80px) / 3);
-  display: flex;
-  flex-direction: column;
-}
-
-.image-block img {
+  gap: 58px;
   width: 100%;
+  justify-content: center;
+}
+
+.col {
+  width: 400px;
   height: auto;
+  flex-shrink: 0;
+}
+
+.col figure {
+  margin: 0;
+}
+
+.col img {
+  width: 100%;
+  height: 400px;
   object-fit: cover;
   display: block;
-  border-radius: 0;
 }
 
 .image-caption {
-  font-family: 'Pontano Sans', sans-serif;
   font-size: 32px;
+  font-family: 'Pontano Sans', sans-serif;
   color: #291C17;
   margin-top: 12px;
   text-align: left;
+}
+
+.button-wrapper {
+  margin-top: 40px;
+  margin-bottom: 97px;
+  text-align: center;
+}
+
+.button-wrapper.about-button {
+  margin-top: auto;
+  margin-bottom: 0;
+  text-align: left;
+  align-self: flex-start;
+}
+
+.view-menu-button {
+  width: 300px;
+  height: 98px;
+  background-color: #291C17;
+  color: white;
+  font-family: 'Pontano Sans', sans-serif;
+  font-size: 36px;
+  line-height: 98px;
+  text-align: center;
+  margin: 0 auto;
+  border: none;
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.view-menu-button:hover {
+  transform: scale(1.05);
+}
+
+.button-wrapper.shop-button .view-menu-button {
+  width: 360px;
+}
+
+.about-us-section {
+  margin-top: 49px;
+  height: 800px;
+  background-color: #924517;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.about-flex {
+  display: flex;
+  gap: 60px;
+  align-items: stretch;
+}
+
+.about-image {
+  width: 669px;
+  height: 600px;
+  overflow: hidden;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 45% center;
+  display: block;
+}
+
+.about-text {
+  flex: 1;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-title {
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: 48px;
+  color: white;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+.about-paragraph {
+  font-family: 'Pontano Sans', sans-serif;
+  font-size: 26px;
+  color: white;
+  line-height: 1.6;
+  margin: 0;
+  text-align: left;
+  max-width: 580px;
+}
+
+.testimonial-section {
+  margin: 80px 0;
+  text-align: center;
+  color: #291C17;
+}
+
+.testimonial-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonial-quote {
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #291C17;
+}
+
+.testimonial-text {
+  font-family: 'Pontano Sans', sans-serif;
+  font-size: 36px;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #291C17;
+  text-align: center;
+}
+
+.fourth-section {
+  background-color: #9B9E70;
+  width: 100%;
+  padding: 60px 0;
+  margin-bottom: -60px;
+}
+
+.white-box {
+  width: 846px;
+  height: 582px;
+  background-color: white;
+  margin-left: 0;
+  padding: 40px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 30px;
+  margin-bottom: 0;
+}
+
+.shop-title {
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: 48px;
+  color: #291C17;
+  margin: 0;
+}
+
+.shop-address {
+  font-family: 'Pontano Sans', sans-serif;
+  font-size: 36px;
+  color: #291C17;
+  margin: 0;
+}
+
+.shop-hours {
+  font-family: 'Pontano Sans', sans-serif;
+  font-size: 36px;
+  color: #291C17;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.button-wrapper.shop-button {
+  margin-top: auto;
+  margin-bottom: 0;
+  text-align: left;
+  align-self: flex-start;
+}
+
+@media screen and (max-width: 768px) {
+  .flex {
+    flex-direction: column;
+  }
+
+  .site-title {
+    font-size: 40px;
+  }
+
+  #main-nav a {
+    font-size: 28px;
+  }
+
+  .overlay-text {
+    font-size: 40px;
+  }
+
+  .section-title {
+    font-size: 40px;
+  }
+
+  .image-caption {
+    font-size: 24px;
+  }
+
+  .col {
+    width: 100%;
+    height: auto;
+  }
+
+  .col img {
+    width: 100%;
+    height: auto;
+  }
+
+  .view-menu-button {
+    width: 300px;
+    height: 88px;
+    font-size: 30px;
+    line-height: 88px;
+  }
+
+  .button-wrapper.shop-button .view-menu-button {
+    width: 360px;
+    height: 88px;
+    font-size: 30px;
+    line-height: 88px;
+  }
+
+  .about-us-section {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .about-flex {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .about-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .about-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .about-title {
+    font-size: 36px;
+  }
+
+  .about-paragraph {
+    font-size: 24px;
+  }
+
+  .image-row {
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0;
+    gap: 20px;
+  }
+
+  .button-wrapper {
+    margin-top: 30px;
+  }
+
+  .testimonial-quote,
+  .testimonial-text {
+    font-size: 28px;
+  }
+
+  .white-box {
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    gap: 20px;
+  }
+
+  .shop-title {
+    font-size: 36px;
+  }
+
+  .shop-address,
+  .shop-hours {
+    font-size: 28px;
+  }
+
+  .button-wrapper.shop-button .view-menu-button {
+    width: 360px;
+    height: 88px;
+    font-size: 30px;
+    line-height: 88px;
+    margin: 0;
+  }
 }

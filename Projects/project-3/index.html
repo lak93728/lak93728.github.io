@@ -9,24 +9,28 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="page-wrapper">
-    <header>
-      <div class="branding-area">
-        <a href="index.html" class="logo-link">
-          <img src="images/coffeelogo.png" alt="Brews & Bonds logo" class="logo" />
-        </a>
-        <a href="index.html" class="site-title">Brews & Bonds</a>
+  <header>
+    <div class="row">
+      <div class="flex header-flex">
+        <div class="branding-area">
+          <a href="index.html" class="logo-link">
+            <img src="images/coffeelogo.png" alt="Brews & Bonds logo" class="logo" />
+          </a>
+          <a href="index.html" class="site-title">Brews & Bonds</a>
+        </div>
+        <nav id="main-nav">
+          <ul>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav class="nav-area" id="nav-area">
-        <ul>
-          <li><a href="#menu">Menu</a></li>
-          <li><a href="#events">Events</a></li>
-          <li><a href="#about">About</a></li>
-        </ul>
-      </nav>
-    </header>
+    </div>
+  </header>
 
-    <div class="hero-image">
+  <main>
+    <div id="hero">
       <div class="image-crop">
         <img src="images/coffeeshop.JPG" alt="Coffee shop" />
         <div class="overlay-box">
@@ -35,22 +39,86 @@
       </div>
     </div>
 
-    <p class="section-title">Customer Favorites</p>
-
+    <div class="row">
+      <h2 class="section-title">Customer Favorites</h2>
+    </div>
     <div class="image-row">
-      <div class="image-block">
-        <img src="images/icedcoffee.jpg" alt="Iced Coffee" />
-        <p class="image-caption">Iced Coffee - $4.00</p>
+      <div class="col">
+        <figure>
+          <img src="images/icedcoffee.jpg" alt="Iced Coffee" />
+          <figcaption class="image-caption">Iced Coffee - $4.00</figcaption>
+        </figure>
       </div>
-      <div class="image-block">
-        <img src="images/matcha.jpg" alt="Matcha Latte" />
-        <p class="image-caption">Matcha Latte - $4.50</p>
+      <div class="col">
+        <figure>
+          <img src="images/matcha.jpg" alt="Matcha Latte" />
+          <figcaption class="image-caption">Matcha Latte - $4.50</figcaption>
+        </figure>
       </div>
-      <div class="image-block">
-        <img src="images/croissant.jpg" alt="Croissant" />
-        <p class="image-caption">Croissant - $2.50</p>
+      <div class="col">
+        <figure>
+          <img src="images/croissant.jpg" alt="Croissant" />
+          <figcaption class="image-caption">Croissant - $2.50</figcaption>
+        </figure>
       </div>
     </div>
-  </div>
+
+    <div class="button-wrapper">
+      <div class="view-menu-button">View Menu</div>
+    </div>
+
+    <div class="about-us-section">
+      <div class="row">
+        <div class="flex about-flex">
+          <div class="about-image">
+            <img src="images/owners.JPG" alt="Owners" />
+          </div>
+          <div class="about-text">
+            <h2 class="about-title">About Us</h2>
+            <p class="about-paragraph">
+              Once upon a time, in the bustling city of San Francisco, a young couple named Jacob and Emily discovered their shared passion for coffee. Both had an unwavering love for the rich aromas, the intricate flavors, and the sense of community that surrounded a simple cup of joe. As fate would have it, their paths crossed one sunny morning at a local coffee shop, where they struck up a conversation over their shared enthusiasm.
+            </p>
+            <div class="button-wrapper about-button">
+              <div class="view-menu-button">Learn more</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-section">
+      <div class="row">
+        <div class="testimonial-wrapper">
+          <p class="testimonial-quote"><strong>"I am in love with everything about Brews & Bonds"</strong></p>
+          <p class="testimonial-text">
+            I am in love with everything about Brews & Bonds. The place is very chic & clean. Everything is just delicious is all I can say. Fabulous service and staff. I’ll definitely be visiting again soon.<br /><br />– Taylor G.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="fourth-section">
+      <div class="row">
+        <div class="white-box">
+          <h2 class="shop-title">Visit Our Shop</h2>
+          <p class="shop-address">2288 Hollow Road, San Francisco CA, 94108</p>
+          <pre class="shop-hours">
+Mon - Fri        7:00am - 10:00pm
+Sat                  7:00am - 9:00pm
+Sun                 7:00am - 2:00pm
+          </pre>
+          <div class="button-wrapper shop-button">
+            <div class="view-menu-button">View Weekly Events</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </main>
+  <footer>
+    <div class="row">
+      <p>&copy; 2025 Brews & Bonds. All Rights Reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
