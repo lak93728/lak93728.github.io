@@ -19,19 +19,55 @@ header {
 
 footer {
   background-color: #9B9E70;
-  height: 318px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 0;
-  padding-top: 0;
+  padding: 60px 0;
+  text-align: center;
 }
 
-footer p {
-  font-size: 18px;
-  color: #291C17;
-  font-family: 'Pontano Sans', sans-serif;
-  margin: 0;
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  color: white;
+}
+
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+.footer-nav a:hover {
+  transform: scale(1.08);
+}
+
+.footer-icons {
+  display: flex;
+  gap: 30px;
+}
+
+.footer-icons a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer-icons img {
+  width: 48px;
+  height: 48px;
+  display: block;
+
+}
+
+.footer-address {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  color: white;
 }
 
 main {
@@ -91,6 +127,13 @@ main {
   text-decoration: none;
   font-size: 35px;
   color: white;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+#main-nav a:hover {
+  transform: scale(1.08);
+  transition: transform 0.2s ease;
 }
 
 .image-crop {
@@ -342,6 +385,7 @@ main {
   align-self: flex-start;
 }
 
+/* Responsive Styles */
 @media screen and (max-width: 768px) {
   .flex {
     flex-direction: column;
@@ -406,7 +450,7 @@ main {
     height: auto;
   }
 
-  .about-image img {
+    .about-image img {
     width: 100%;
     height: auto;
   }
