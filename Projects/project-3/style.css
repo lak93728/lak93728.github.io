@@ -590,10 +590,18 @@ main {
     max-width: 580px;
   }
 
+  #close-nav-btn {
+  display: none; /* ✅ hidden by default on desktop */
+}
+
 @media (max-width: 768px) {
   .row {
     padding: 20px;
   }
+
+  #main-nav.active #close-nav-btn {
+  display: block; /* ✅ only visible when menu is open */
+}
 
   .header-flex {
     flex-direction: column;
