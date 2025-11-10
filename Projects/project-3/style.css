@@ -1042,74 +1042,82 @@ main {
     
   }
 }
+ 
+  
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  z-index: 998;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+
+
 
 @media (max-width: 768px) {
   #main-nav {
-    display: none;
-  }
-
-  #toggle-nav-btn {
-    display: block;
-    background: none;
-    border: none;
-    cursor: pointer;
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    z-index: 1000;
-  }
-
-  #toggle-nav-btn .bar {
-    display: block;
-    width: 22px;
-    height: 3px;
-    margin: 4px 0;
-    background-color: #291C17;
-  }
-
-  #mobile-nav {
-    display: none;
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 0px;
+    left: -100%;
     width: 100%;
-    height: 100vh;
-    background-color: white;
+    background: #ffffff;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    text-align: center;
+    overflow-y: auto;
+    transition: left 0.3s ease-in-out;
     z-index: 999;
   }
 
-  #mobile-nav.open {
-    display: flex;
+  #main-nav.active {
+    left: 0;
   }
 
-  #mobile-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    gap: 20px;
-    display: flex;
+  #main-nav ul {
     flex-direction: column;
+    gap: 20px;
+    padding: 40px 0;
     align-items: center;
+    justify-content: center;
+    display: flex;
+    list-style: none;
+    margin: 0;
   }
 
-  #mobile-nav a {
-    font-size: 28px;
-    color: #291C17;
+  #main-nav a {
+    color: black;
+    text-align: center;
+    font-size: 24px;
     text-decoration: none;
     font-family: 'Tenor Sans', sans-serif;
   }
 
-  #close-nav-btn {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 36px;
-    background: none;
-    border: none;
-    color: #291C17;
-    cursor: pointer;
+  .hamburger {
+    display: block;
   }
+  #close-nav-btn {
+  position: absolute;
+  display: block;
+  top: 20px;
+  right: 30px;
+  background: none;
+  border: none;
+  font-size: 36px;
+  color: #000000;
+  cursor: pointer;
+  z-index: 1001;
 }
+}
+

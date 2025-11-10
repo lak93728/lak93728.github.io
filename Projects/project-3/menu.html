@@ -25,14 +25,26 @@
           </a>
           <a href="index.html" class="site-title">Brews & Bonds</a>
         </div>
-        <nav id="main-nav">
-          <ul>
-            <li><a href="menu.html">Menu</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="about.html">About</a></li>
-          </ul>
-        </nav>
-      </div>
+
+<!-- Hamburger button -->
+<div class="hamburger" id="hamburger">
+  <span class="bar"></span>
+  <span class="bar"></span>
+  <span class="bar"></span>
+</div>
+
+<!-- Navigation menu -->
+<nav id="main-nav">
+  <button id="close-nav-btn" aria-label="Close menu">×</button>
+  <ul>
+  
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+</nav>
+
+
     </div>
   </header>
 
@@ -190,6 +202,30 @@
       </div>
     </div>
   </footer>
+  <script>
+  const hamburger = document.querySelector('.hamburger');
+  const nav = document.getElementById('main-nav');
 
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    nav.classList.toggle('active');
+  });
+
+
+  document.querySelectorAll('#main-nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      nav.classList.remove('active');
+    });
+  });
+  const closeBtn = document.getElementById('close-nav-btn');
+
+closeBtn.addEventListener('click', () => {
+  hamburger.classList.remove('active');
+  nav.classList.remove('active');
+  
+});
+
+</script>
 </body>
 </html>
