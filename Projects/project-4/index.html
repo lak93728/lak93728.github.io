@@ -6,55 +6,242 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
-
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
   
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   
   <!-- Custom Styles -->
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Divider styling */
+    .section-divider {
+      all: unset;
+      display: block;
+      border-top: 3px solid #C58772;
+      margin: 24px 170px;
+      opacity: 1;
+    }
+
+    /* Full-bleed wrapper */
+    .full-bleed {
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+    }
+
+    /* Horizontal scroll gallery */
+    .scroll-gallery {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      padding: 20px 0;
+    }
+    .scroll-gallery::-webkit-scrollbar {
+      height: 8px;
+    }
+    .scroll-gallery::-webkit-scrollbar-thumb {
+      background: #C58772;
+      border-radius: 4px;
+    }
+    .scroll-gallery .artwork {
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+      margin: 0 12px;
+      text-align: center;
+    }
+    .scroll-gallery img {
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 6px;
+      display: block;
+    }
+    .scroll-gallery p {
+      margin-top: 8px;
+      font-weight: 600;
+      color: #000;
+    }
+
+    /* Gallery navigation arrows */
+    .gallery-nav button {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    .gallery-nav .carousel-control-prev-icon,
+    .gallery-nav .carousel-control-next-icon {
+      filter: invert(1) grayscale(1);
+      width: 2rem;
+      height: 2rem;
+    }
+
+    /* Collection section fixes */
+    .text-block {
+      padding-left: 170px; /* left gutter */
+    }
+    .img-wrapper {
+      width: 100%;
+      height: 220px;
+      overflow: hidden;
+    }
+    .img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .caption {
+      margin-top: 8px;
+      font-family: 'Fira Sans', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: #000;
+      text-align: left; /* captions align left */
+    }
+  </style>
 </head>
 <body>
   <header class="navbar container-fluid">
     <div class="row align-items-end">
-    <div class="row">
-      <!-- Logo placeholder -->
-      <div class="logo-nav">
-        <div class="logo">
-        <img src="images/logo.png" alt="Aurora Art Museum Logo">
-      </div>
-      </div>
-      
-      <!-- Nav links side by side -->
-      <div class="col nav-links">
-        <a href="#">Visit</a>
-        <a href="#">Exhibitions</a>
-        <a href="#">Collections</a>
-        <a href="#">Events</a>
-        <a href="#">About</a>
-      </div>
-      <!-- Ticket button -->
-      <div class="ticket-nav">
-        <button class="ticket-button">Get Tickets</button>
+      <div class="row">
+        <!-- Logo -->
+        <div class="logo-nav">
+          <div class="logo">
+            <img src="images/logo.png" alt="Aurora Art Museum Logo">
+          </div>
+        </div>
+        
+        <!-- Nav links -->
+        <div class="col nav-links">
+          <a href="#">Visit</a>
+          <a href="#">Exhibitions</a>
+          <a href="#">Collections</a>
+          <a href="#">Events</a>
+          <a href="#">About</a>
+        </div>
+        <!-- Ticket button -->
+        <div class="ticket-nav">
+          <button class="ticket-button">Get Tickets</button>
+        </div>
       </div>
     </div>
   </header>
-<section class="hero">
-  <img src="images/hero.jpg" alt="Aurora Art Museum Hero">
-</section>
 
-<section class="info-section">
-  <div class="intro-block">
-    <h2 class="welcome-text">Welcome</h2>
-    <p class="tagline">Start your journey through art</p>
+  <section class="hero">
+    <img src="images/hero.jpg" alt="Aurora Art Museum Hero">
+  </section>
+
+  <section class="info-section">
+    <div class="intro-block">
+      <h2 class="welcome-text">Welcome</h2>
+      <p class="tagline">Start your journey through art</p>
+    </div>
+
+    <div class="visit-block">
+      <p class="hours">Open everyday but Mondays.</p>
+      <button class="visit-button">Plan Your Visit</button>
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <hr class="section-divider">
+
+  <!-- Exhibitions Header with arrows -->
+  <div class="container d-flex justify-content-between align-items-center mb-2">
+     <h2 class="exhibitions-title">Exhibitions</h2>
+    <div class="gallery-nav">
+      <button class="btn btn-link p-0 me-3" id="scrollLeft">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="btn btn-link p-0" id="scrollRight">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
   </div>
 
-  <div class="visit-block">
-    <p class="hours">Open everyday but Mondays.</p>
-    <button class="visit-button">Plan Your Visit</button>
+  <!-- Full-bleed horizontal scroll gallery -->
+  <div class="full-bleed bg-light">
+    <div class="scroll-gallery" id="galleryRow">
+      <div class="artwork">
+        <img src="images/tech.jpg" alt="Tech">
+        <p>The Digital Canvas</p>
+      </div>
+      <div class="artwork">
+        <img src="images/abstract.jpg" alt="Abstract">
+        <p>Light & Shadow: New Dimensions in <br>
+          Contemporary Art</p>
+      </div>
+      <div class="artwork">
+        <img src="images/flower.webp" alt="Flower">
+        <p>Local Visions: Artists of Our City</p>
+      </div>
+      <div class="artwork">
+        <img src="images/bird.jpg" alt="Bird">
+        <p>Echoes of Nature</p>
+      </div>
+      <!-- Add more artworks here -->
+    </div>
   </div>
-</section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const galleryRow = document.getElementById('galleryRow');
+    document.getElementById('scrollLeft').addEventListener('click', () => {
+      galleryRow.scrollBy({ left: -300, behavior: 'smooth' });
+    });
+    document.getElementById('scrollRight').addEventListener('click', () => {
+      galleryRow.scrollBy({ left: 300, behavior: 'smooth' });
+    });
+  </script>
+
+  <hr class="section-divider">
+
+  <!-- Collection section -->
+  <div class="container my-5">
+    <div class="row align-items-start">
+      
+      <!-- Left block -->
+      <div class="col-md-5 offset-md-1 text-block">
+        <h2 class="collection-heading">Art and Artists in Our Collection</h2>
+        <p class="collection-subheading">Highlights from the permanent collection</p>
+        <button class="btn btn-success mt-3">View Collection</button>
+      </div>
+
+      <!-- Right block with grid -->
+      <div class="col-md-5 grid-block">
+        <div class="row g-4 image-grid">
+          <div class="col-6">
+            <div class="img-wrapper">
+              <img src="images/water.jpg" alt="water">
+            </div>
+            <p class="caption">"Midnight River"</p>
+          </div>
+          <div class="col-6">
+            <div class="img-wrapper">
+              <img src="images/swirl.jpg" alt="swirl">
+            </div>
+            <p class="caption">"Ceremonial Vessel"</p>
+          </div>
+          <div class="col-6">
+            <div class="img-wrapper">
+              <img src="images/city.jpg" alt="city">
+            </div>
+            <p class="caption">"City in Motion"</p>
+          </div>
+          <div class="col-6">
+            <div class="img-wrapper">
+              <img src="images/aura.jpg" alt="aura">
+            </div>
+            <p class="caption">"Aurora Rising"</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
 </body>
 </html>

@@ -1,11 +1,11 @@
 /* Global reset */
-body {
-  background-color: #ffffff;
+html, body {
   margin: 0;
+  background-color: #ffffff;
   font-family: 'Fira Sans', sans-serif;
 }
 
-/* Global gutter */
+/* Global gutter for container sections */
 .container-fluid {
   padding-left: 170px;
   padding-right: 170px;
@@ -14,109 +14,227 @@ body {
 
 /* Navbar */
 .navbar {
- display: flex;
-  justify-content: space-between; /* logo/nav on left, button on right */
-  align-items: flex-start;        /* align items to the top */
-  padding: 20px 170px;  
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 170px;
 }
 
-/* Logo pinned top-left */
+/* Logo */
 .logo-nav {
-  flex: 0 0 auto; /* ✅ keeps logo fixed size */
+  flex: 0 0 auto;
 }
-
 .logo img {
-  width: 183px;   /* ✅ smaller logo */
+  width: 183px;
   height: auto;
   object-fit: contain;
   display: block;
 }
 
-/* Nav links side by side */
+/* Nav links */
 .nav-links {
   display: flex;
   gap: 40px;
 }
-
 .nav-links a {
-  font-family: 'Fira Sans', sans-serif;
   font-weight: 700;
   font-size: 35px;
-  color: #000000;
+  color: #000;
   text-decoration: none;
 }
 
-/* Ticket button aligned top-right */
-
-
+/* Ticket button */
 .ticket-button {
- align-self: flex-start; 
-  font-family: 'Fira Sans', sans-serif;
+  align-self: flex-start;
   font-weight: 400;
   font-size: 24px;
-  color: #ffffff;
+  color: #fff;
   background-color: #C1272D;
   border: none;
   padding: 12px 24px;
   cursor: pointer;
-  position:absolute;
+  position: absolute;
   right: 170px;
   top: 20px;
 }
 
+/* Hero section */
 .hero {
   width: 100%;
   height: 360px;
-  text-align: center; /* centers the image horizontally */
+  text-align: center;
   overflow: hidden;
   margin: 0;
   padding: 0;
 }
-
 .hero img {
-  height: 100%;  /* ✅ cap the size so it’s smaller */
-  width: 100%;        /* scales to container */
-  height: auto;  
-  object-fit: cover;     /* keep proportions */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
-/* Info section layout */
+/* Info section */
 .info-section {
   display: flex;
-  justify-content: space-between; /* space between the two blocks */
+  justify-content: space-between;
   align-items: flex-start;
-  padding: 40px 170px;            /* match your gutters */
+  padding: 40px 170px;
 }
-
-/* Intro block */
 .welcome-text {
   color: #C1272D;
-  font-family: DM Serif Display;
+  font-family: 'DM Serif Display', serif;
   font-size: 57px;
   margin: 0 0 10px 0;
 }
-
 .tagline {
-  color: #000000;
+  color: #000;
   font-size: 30px;
   font-weight: bold;
   margin: 0;
 }
-
-/* Visit block */
 .hours {
   font-size: 27px;
-  color: #000000;
+  color: #000;
   margin-left: 350px;
 }
-
 .visit-button {
   font-size: 25px;
-  color: #ffffff;
-  background-color:#5B6C35;
+  color: #fff;
+  background-color: #5B6C35;
   border: none;
   padding: 12px 24px;
   cursor: pointer;
   margin-left: 500px;
+}
+
+/* Divider */
+.section-divider {
+  border: none;
+  border-top: 3px solid #C58772;
+  margin: 24px 170px;
+  width: 100%;
+  opacity: 1;
+}
+
+/* Full-bleed wrapper */
+.full-bleed {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  background-color: #ffffff;
+}
+
+/* Horizontal scroll gallery */
+.scroll-gallery {
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 20px 0;
+  background-color: #ffffff;
+  padding-left: 150px;  
+  scroll-padding-left: 150px;
+}
+.scroll-gallery::-webkit-scrollbar {
+  display: none;
+}
+.scroll-gallery::-webkit-scrollbar-thumb {
+  background: #C58772;
+  border-radius: 4px;
+}
+.scroll-gallery .artwork {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  text-align: center;
+}
+.scroll-gallery .artwork:first-child {
+  margin-left: -60px;   /* ✅ pushes the first image further off the page */
+}
+.scroll-gallery img {
+  width: 475px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 0 !important;
+  display: block;
+}
+.scroll-gallery p {
+  margin-top: 12px;
+  font-family: 'Fira Sans', sans-serif; /* matches your chosen font */
+  font-size: 28px;        /* ✅ larger font size */
+  font-weight: bolder !important;
+  color: #291C17;         /* your brown text color */
+  text-align: left;       /* ✅ align text to the left */
+  width: 470px;           /* ✅ match image width so alignment is exact */
+  line-height: 1.3;
+  white-space: normal;
+  display: block;
+}
+.gallery-nav button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.gallery-nav .carousel-control-prev-icon,
+.gallery-nav .carousel-control-next-icon {
+  filter: invert(1) grayscale(1);
+  width: 2rem;
+  height: 2rem;
+}
+
+.exhibitions-title {
+  font-family: 'Fira Sans'; /* optional: match your style */
+  font-size: 48px;
+  font-weight: bold;
+  color: #23353F;   /* ✅ example: your primary red */
+  margin: 0;
+}
+
+.collection-heading {
+  font-family: 'Fira Sans', serif;
+  font-size: 45px;
+  font-weight: 900;
+  color: #23353F;
+}
+
+.collection-subheading {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 18px;
+  color: #555;
+}
+
+.caption {
+  margin-top: 8px;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  text-align: left;
+}
+
+.image-grid {
+  position: relative;
+  left: -20px;   /* adjust this value until it looks right */
+}
+
+.img-wrapper {
+  width: 100%;        /* fills its grid cell */
+  height: 220px;      /* fixed height for all images */
+  overflow: hidden;   /* crop anything outside */
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* ensures consistent crop */
+  display: block;
+}
+
+.text-block {
+  margin-right: 20px;  /* ✅ pushes the whole text block inward */
+}
+
+.grid-block {
+  margin-left: 185px;  /* ✅ increase this value to make the gap larger */
 }
