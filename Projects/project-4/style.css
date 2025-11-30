@@ -232,7 +232,7 @@ html, body {
 }
 
 .text-block {
-  margin-right: 20px;  /* ✅ pushes the whole text block inward */
+  margin-right: 0px;  /* ✅ pushes the whole text block inward */
 }
 
 .grid-block {
