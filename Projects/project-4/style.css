@@ -140,7 +140,10 @@ flex-direction: column;
   display: flex;
   gap: 15px;
 }
-.nav-btn {
+.gallery-nav .nav-btn {
+  inline-size: 60px;
+  block-size: 60px;
+  clip-path: circle(50%);
   font-size: 40px;
   align-items: flex-end;
   font-weight: 1200;
@@ -150,6 +153,7 @@ flex-direction: column;
   border-radius: 50%;
   line-height: 1;
 }
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   filter: invert(1) grayscale(1);
@@ -191,6 +195,7 @@ flex-direction: column;
   color: #000;
   text-align: left;
   width: 465px;
+  margin-bottom: 40px;
 }
 
 /* Collection & Events Sections */
@@ -206,35 +211,41 @@ flex-direction: column;
   max-width: 40%;
 }
 .collection-heading {
-  font-size: 36px;
+  font-size: 52px;
   font-weight: 900;
   color: #23353F;
   line-height: 1.2;
+  margin-top: 75px;
+  margin-bottom: 5px;
 }
+
 .collection-subheading {
-  font-size: 20px;
+  font-size: 32px;
   color: #000;
   line-height: 1.2;
+  margin-bottom: 5px;
 }
 .view-button {
-  font-size: 20px;
+  font-size: 27px;
   padding: 10px 20px;
   background-color: #5B6C35;
   color: #fff;
   border: none;
   cursor: pointer;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .image-grid {
   flex: 1;
   max-width: 50%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  gap: 65px;
+  margin-top: 75px;
+  margin-right: 115px;
 }
 .img-wrapper {
-  width: 100%;
-  height: 220px;
+  width: 325px;
+  height: 225px;
   overflow: hidden;
 }
 .img-wrapper img {
@@ -245,79 +256,64 @@ flex-direction: column;
 }
 .caption {
   margin-top: 8px;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 32px;
+  font-weight: lighter;
   color: #000;
   text-align: left;
 }
 
-/* Come Explore Section */
 .come-explore {
   display: flex;
   justify-content: space-between;
+  align-items: stretch;
   align-items: flex-start;
   padding: 40px 170px;
   gap: 60px;
 }
-.explore-text {
-  flex: 1;
-}
+
+/* Left column */
 .explore-title {
-  font-size: 36px;
+  font-size: 52px;          /* same as previous section heading */
   font-weight: 900;
   color: #23353F;
-  margin-bottom: 20px;
+  line-height: 1.2;
+  margin-bottom: 8px;       /* consistent spacing */
 }
-.explore-address,
-.explore-hours {
-  font-size: 18px;
+
+.explore-subheading {
+  font-size: 27px;          /* same as previous subheading */
   color: #000;
-  margin-bottom: 10px;
+  line-height: 1.4;
+  margin-bottom: 20px;      /* ⬅️ 20px gap before button */
 }
+
 .explore-button {
-  font-size: 20px;
+  font-size: 27px;
   padding: 10px 20px;
-  background-color: #C1272D;
+  background-color: #5B6C35; /* same green as other sections */
   color: #fff;
   border: none;
   cursor: pointer;
-  margin-top: 20px;
-}
-.explore-map {
-  flex: 1;
-}
-.explore-map img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
+  margin-bottom: 20px;       /* ⬅️ 20px gap before hours text */
 }
 
-/* Final About Section */
-.about-us-section {
-  padding: 60px 170px;
+.explore-hours {
+  font-size: 27px;
   color: #000;
+  line-height: 1.4;
 }
-.about-flex {
-  display: flex;
-  gap: 40px;
-  align-items: center;
-}
-.about-image img {
-  width: 300px;
-  height: auto;
-  object-fit: cover;
-  display: block;
-}
-.about-text {
+
+.explore-map {
   flex: 1;
+  margin-right: -400px;  /* ⬅️ cancels out the section’s right padding */
 }
-.about-title {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-.about-paragraph {
-  font-size: 18px;
-  line-height: 1.6;
+
+/* Right column image */
+.explore-map img {
+  width: 650px;
+  height: 470px;
+  object-fit: cover;
+  align-items: flex-end;
+  display: block;
+  margin-left: 50px;
 }
