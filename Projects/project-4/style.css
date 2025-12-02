@@ -181,9 +181,10 @@ flex-direction: column;
   scroll-snap-align: start;
   text-align: center;
 }
-.scroll-gallery .artwork:first-child {
-  margin-left: 20px; /* gutter for first image */
-}
+
+.scroll-gallery .artwork:first-child { margin-left: 0; }
+.scroll-gallery .artwork:last-child  { margin-right: 0; }
+
 .scroll-gallery img {
   width: 465px;
   height: 350px;
@@ -271,6 +272,7 @@ flex-direction: column;
   align-items: flex-start;
   padding: 40px 170px;
   gap: 60px;
+  margin-bottom: 90px;
 }
 
 /* Left column */
@@ -325,11 +327,11 @@ flex-direction: column;
 
 .site-footer {
   background-color: #DDD1C1;
-  height: 565px;
-  width: 1920px;
+  height: 450px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 60px 170px;
+  padding: 40px 170px;
   box-sizing: border-box;
 }
 
@@ -340,27 +342,33 @@ flex-direction: column;
 }
 
 .footer-title {
-  font-size: 36px;
+  font-size: 42px;
+  font-weight: lighter;
   color: #000;
   margin: 0 0 20px 0;
-  line-height: 1.4;
+  line-height: 1.1;
 }
 
 .footer-heading {
-  font-size: 24px;
+  font-size: 30px;
+  line-height: 1.1;
   font-weight: bold;
+  font-family: 'Inter', sans-serif;
   margin: 0 0 8px 0;
 }
 
 .footer-email {
-  font-size: 24px;
-  font-weight: lighter;
+  font-size: 30px;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.1;
   margin: 0 0 auto 0; /* pushes copy down */
 }
 
 .footer-copy {
-  font-size: 20px;
-  margin-top: auto; /* sits at bottom of column */
+  font-size: 30px;
+  font-family: 'Inter', sans-serif;
+  opacity: 30%;
+  margin-top: 60px; /* sits at bottom of column */
 }
 
 /* Right column */
@@ -371,11 +379,135 @@ flex-direction: column;
 
 .social-icons {
   display: flex;
-  gap: 20px;
+  gap: 40px;
+  margin-left: -100px;
+  margin-bottom: 15px;
 }
 
 .social-icons img {
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   object-fit: contain;
+}
+
+/* Visit Page */
+.visit-section {
+  padding: 0px 170px 20px 170px /* same margins as homepage */ 
+  
+}
+
+.visit-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 64px;       /* same as welcome header */
+  font-weight: 400;
+  color: #C1272D;        /* bold red */
+  margin: 0 0 20px 0;
+  margin-top: 20px;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+
+.visit-text {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 28px;       /* same as tagline */
+  color: #000;
+  line-height: 1.1;
+  max-width: 900px;      /* keeps text aligned to left margin */
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+/* Visit Explore Section (duplicate of Come Explore styles) */
+.visit-explore {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px 170px;
+  padding-top: 5px;
+  gap: 60px;
+  margin-bottom: 90px;
+  margin-top: 0;
+}
+
+.visit-explore-text {
+  flex: 1;
+}
+
+.visit-explore-title {
+  font-size: 52px;
+  font-weight: 900;
+  color: #23353F;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.visit-explore-subheading {
+  font-size: 27px;
+  color: #000;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.visit-explore-hours {
+  font-size: 27px;
+  color: #000;
+  line-height: 1.4;
+}
+
+.visit-explore-map {
+  flex: 1;
+}
+
+.visit-explore-map img {
+  width: 675px;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+/* Admissions Section */
+.visit-admissions {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 5px 170px 40px 170px;
+  gap: 60px;              /* keeps columns close but distinct */
+}
+
+/* First column */
+.admissions-title {
+  font-size: 52px;        /* same as Location heading */
+  font-weight: 900;
+  color: #23353F;
+  line-height: 1.7;
+  margin-top: -50px;
+  margin-bottom: 8px;
+}
+
+.admissions-subheading {
+  font-size: 27px;        /* same as Location subheading */
+  color: #000;
+  line-height: 1.3;
+  margin-top: -5px;
+  max-width: 475px;
+}
+
+/* Second column (categories) */
+.admissions-categories p {
+  font-size: 27px;        /* same as nav button text */
+  font-weight: 900;
+  color: #000;
+  margin: 8px 0;
+  margin-left: 150px;
+}
+
+/* Third column (prices) */
+.admissions-prices p {
+  font-size: 27px;        /* same as subheading text */
+  color: #000;
+  line-height: -.1;
+  margin: 8px 0;
+  margin-left: 150px;
 }
