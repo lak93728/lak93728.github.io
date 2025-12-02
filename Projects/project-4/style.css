@@ -3,6 +3,8 @@ html, body {
   margin: 0;
   background-color: #ffffff;
   font-family: 'Fira Sans', sans-serif;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 /* Shared gutter container */
@@ -99,7 +101,7 @@ flex-direction: column;
   margin: 0 0 10px 0;
 }
 .visit-button {
-  font-size: 28px;
+  font-size: 30px;
   font-family: 'Fira Sans', sans-serif;
   font-weight: lighter;
   color: #fff;
@@ -226,7 +228,8 @@ flex-direction: column;
   margin-bottom: 5px;
 }
 .view-button {
-  font-size: 27px;
+  font-size: 30px;
+  font-family: 'Fira Sans', sans-serif;
   padding: 10px 20px;
   background-color: #5B6C35;
   color: #fff;
@@ -265,7 +268,6 @@ flex-direction: column;
 .come-explore {
   display: flex;
   justify-content: space-between;
-  align-items: stretch;
   align-items: flex-start;
   padding: 40px 170px;
   gap: 60px;
@@ -278,6 +280,7 @@ flex-direction: column;
   color: #23353F;
   line-height: 1.2;
   margin-bottom: 8px;       /* consistent spacing */
+  justify-content: flex-start;
 }
 
 .explore-subheading {
@@ -288,7 +291,8 @@ flex-direction: column;
 }
 
 .explore-button {
-  font-size: 27px;
+  font-size: 30px;
+  font-family: 'Fira Sans', sans-serif;
   padding: 10px 20px;
   background-color: #5B6C35; /* same green as other sections */
   color: #fff;
@@ -310,10 +314,68 @@ flex-direction: column;
 
 /* Right column image */
 .explore-map img {
-  width: 650px;
-  height: 470px;
+  width: 675px;
+  height: 500px;
   object-fit: cover;
   align-items: flex-end;
   display: block;
   margin-left: 50px;
+  margin-top: 50px;
+}
+
+.site-footer {
+  background-color: #DDD1C1;
+  height: 565px;
+  width: 1920px;
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 170px;
+  box-sizing: border-box;
+}
+
+/* Left column */
+.footer-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-title {
+  font-size: 36px;
+  color: #000;
+  margin: 0 0 20px 0;
+  line-height: 1.4;
+}
+
+.footer-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 0 8px 0;
+}
+
+.footer-email {
+  font-size: 24px;
+  font-weight: lighter;
+  margin: 0 0 auto 0; /* pushes copy down */
+}
+
+.footer-copy {
+  font-size: 20px;
+  margin-top: auto; /* sits at bottom of column */
+}
+
+/* Right column */
+.footer-right {
+  display: flex;
+  align-items: flex-end; /* icons at bottom */
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icons img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
 }
