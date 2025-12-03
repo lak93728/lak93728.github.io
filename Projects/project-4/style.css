@@ -417,6 +417,8 @@ flex-direction: column;
   margin-bottom: 5px;
 }
 
+
+
 /* Visit Explore Section (duplicate of Come Explore styles) */
 .visit-explore {
   display: flex;
@@ -473,7 +475,7 @@ flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   padding: 5px 170px 40px 170px;
-  gap: 60px;              /* keeps columns close but distinct */
+  gap: 40px;              /* keeps columns close but distinct */
 }
 
 /* First column */
@@ -510,4 +512,65 @@ flex-direction: column;
   line-height: -.1;
   margin: 8px 0;
   margin-left: 150px;
+}
+
+/* Visit Section */
+.visit-section {
+  display: flex;              /* keep stacked layout unless floated */
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 40px 0px 40px 170px;
+  margin-top: 40px;
+  gap: 100px;
+}
+
+/* Text block */
+.visit-text-block {
+  max-width: 40%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Heading + subheading */
+.visit-heading {
+  font-size: 52px;
+  font-weight: 900;
+  color: #23353F;
+  line-height: 1.2;
+  margin-top: 0;               /* no extra offset */
+  margin-bottom: 8px;
+}
+
+.visit-subheading {
+  font-size: 32px;
+  color: #000;
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+.visit-image-grid {
+  display: grid;                     /* ⬅️ switch to grid layout */
+  grid-template-columns: 1fr 1fr;    /* two columns */
+  gap: 65px;                         /* spacing between items */
+  margin-top: -75;                     /* align with heading */
+  margin-left: 100px;                /* bigger gap from text */
+  margin-right: 165px;
+  justify-self: end;
+}
+
+/* Plan Your Visit header block */
+.visit-header {
+  padding: 40px 170px;       /* same horizontal margins */
+  margin-bottom: 15px;       /* ⬅️ pushes rest of layout down for blurb space */
+}
+
+.visit-header .visit-title {
+  display: block;            /* force onto its own line */
+  margin-bottom: 20px;       /* gap before blurb */
+}
+
+.visit-header .visit-text {
+  display: block;            /* stack under title */
+  margin: 0;
+  margin-bottom: 0;          /* keep tight, spacing handled by section margin */
 }
