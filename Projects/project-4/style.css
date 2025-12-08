@@ -207,7 +207,7 @@ flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
   padding: 40px 170px;
-  gap: 60px;
+  gap: 40px;
 }
 .text-block {
   flex: 1;
@@ -332,6 +332,7 @@ flex-direction: column;
   display: flex;
   justify-content: space-between;
   padding: 40px 170px;
+  margin: 0px;
   box-sizing: border-box;
 }
 
@@ -573,4 +574,749 @@ flex-direction: column;
   display: block;            /* stack under title */
   margin: 0;
   margin-bottom: 0;          /* keep tight, spacing handled by section margin */
+}
+
+.member-section {
+  padding: 0px 170px 20px 170px /* same margins as homepage */ 
+  
+}
+
+.member-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 64px;       /* same as welcome header */
+  font-weight: 400;
+  color: #C1272D;        /* bold red */
+  margin: 0 0 20px 0;
+  margin-top: 20px;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+
+.member-text {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 28px;       /* same as tagline */
+  color: #000;
+  line-height: 1.1;
+  max-width: 900px;      /* keeps text aligned to left margin */
+  margin: 0;
+  margin-bottom: 5px;
+}
+.member-header {
+  padding: 40px 170px;       /* same horizontal margins */
+  margin-bottom: 15px;       /* ⬅️ pushes rest of layout down for blurb space */
+}
+
+.member-header .member-title {
+  display: block;            /* force onto its own line */
+  margin-bottom: 20px;       /* gap before blurb */
+}
+
+.member-header .member-text {
+  display: block;            /* stack under title */
+  margin: 0;
+  margin-bottom: 0;
+} 
+
+.hall-image {
+  display: block;              /* ensures it sits on its own line */
+  width: 100%;                 /* fills available width */
+  max-width: 1500px;            /* matches text width for alignment */
+  margin: 50px auto 0 auto;    /* centers image within margins */
+  border-radius: 4px;          /* optional: soft corners */
+  object-fit: cover;
+  height: 500px;
+}
+
+.visit-level {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 60px 170px 40px 170px;
+  gap: 40px;              /* keeps columns close but distinct */
+}
+
+/* First column */
+.level-title {
+  font-size: 52px;        /* same as Location heading */
+  font-weight: 900;
+  color: #23353F;
+  line-height: 1.7;
+  margin-top: -50px;
+  margin-bottom: 8px;
+}
+
+.level-subheading {
+  font-size: 27px;        /* same as Location subheading */
+  color: #000;
+  line-height: 1.3;
+  margin-top: -5px;
+  max-width: 475px;
+}
+
+/* Second column (categories) */
+.level-categories p {
+  font-size: 27px;        /* same as nav button text */
+  font-weight: 900;
+  color: #000;
+  margin: 8px 0;
+  margin-left: 150px;
+}
+
+/* Third column (prices) */
+.level-prices p {
+  font-size: 27px;        /* same as subheading text */
+  color: #000;
+  line-height: -.1;
+  margin: 8px 0;
+  margin-left: 150px;
+}
+.member-section {
+  padding: 0px 170px 20px 170px /* same margins as homepage */ 
+}
+
+.member-section {
+  padding: 0px 170px 20px 170px /* same margins as homepage */ 
+  
+}
+
+.exhibitions-heading {
+  font-family: 'DM Serif Display', serif;
+  font-size: 64px;       /* same as welcome header */
+  font-weight: 400;
+  color: #C1272D;        /* bold red */
+  margin: 0 0 20px 0;
+  margin-top: 20px;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+
+.exhibitions-subheading {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 28px;       /* same as tagline */
+  color: #000;
+  line-height: 1.1;
+  max-width: 900px;      /* keeps text aligned to left margin */
+  margin: 0;
+  margin-bottom: 5px;
+  margin-left: 170px;
+}
+
+.exhibitions-section {
+  padding: 0px 170px 20px 170px /* same margins as homepage */ 
+  
+}
+.exhibitions-heading {
+  padding: 40px 170px;       /* same horizontal margins */
+  margin-bottom: 15px;       /* ⬅️ pushes rest of layout down for blurb space */
+}
+
+.exhibitions-heading .exhibitions-subheading {
+  display: block;            /* force onto its own line */
+  margin-bottom: px;       /* gap before blurb */
+}
+
+.exhibitions-heading .exhibitions-subheading {
+  display: block;            /* stack under title */
+  margin: 0;
+  margin-bottom: 0;
+}
+.exhibitions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 170px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+.exhibitions-title {
+  font-size: 50px;
+  font-weight: bold;
+  color: #23353F;
+  margin: 0;
+}
+.gallery-nav {
+  display: flex;
+  gap: 15px;
+}
+.gallery-nav .nav-btn {
+  inline-size: 60px;
+  block-size: 60px;
+  clip-path: circle(50%);
+  font-size: 40px;
+  align-items: flex-end;
+  font-weight: 1200;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  line-height: 1;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1) grayscale(1);
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Scroll Gallery */
+.scroll-gallery {
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 5px 80px;
+  margin: 0;
+  width: 100%;
+}
+.scroll-gallery::-webkit-scrollbar { display: none; }
+
+.scroll-gallery .artwork {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  text-align: center;
+}
+
+.scroll-gallery .artwork:first-child { margin-left: 0; }
+.scroll-gallery .artwork:last-child  { margin-right: 0; }
+
+.scroll-gallery img {
+  width: 465px;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+}
+.scroll-gallery p {
+  margin-top: 12px;
+  font-size: 27px;
+  font-weight: bolder;
+  color: #000;
+  text-align: left;
+  width: 465px;
+  margin-bottom: 40px;
+}
+.exhibitionscarousel-title {
+  font-size: 40px;
+  font-weight: bold;
+  color: #23353F;
+  margin: 0
+}
+.carousel-text {
+  font-family: 'Fira Sans', sans-serif; /* or same as nav buttons */
+  font-size: 28px;                        /* same as nav buttons */
+  font-weight: bolder;                      /* same as nav buttons */
+  color: #000;                            /* match nav button color */
+  text-align: left;                     /* centers under carousel */
+  margin-top: 5px;  
+  margin-left: 175px;                     /* spacing from carousel */
+}
+.exhibitionscarousel2-title {
+  font-size: 40px;
+  font-weight: bold;
+  color: #23353F;
+ margin-top: 60px;
+}
+
+.carousel2-text {
+  font-family: 'Fira Sans', sans-serif; /* or same as nav buttons */
+  font-size: 28px;                        /* same as nav buttons */
+  font-weight: bolder;                      /* same as nav buttons */
+  color: #000;                            /* match nav button color */
+  text-align: left;                     /* centers under carousel */
+  margin-top: 5px;  
+  margin-left: 175px;                     /* spacing from carousel */
+}
+
+.upcoming-layout {
+  display: flex;              /* side-by-side layout */
+  justify-content: space-between; /* pushes grid to right margin */
+  align-items: flex-start;    /* align tops */
+  gap: 40px; 
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* responsive grid */
+  gap: 40px; /* space between items */
+  margin-top: 40px;
+  
+}
+
+.artwork {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* captions align left */
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.caption {
+  margin-top: 8px;
+  font-size: 32px;
+  font-weight: lighter;
+  color: #000;
+  text-align: left;
+}
+.upcoming-heading {
+  font-size: 52px;
+  font-weight: 900;
+  color: #23353F;
+  line-height: 1.2;
+  margin-top: 75px;
+  margin-bottom: 5px;
+  margin-left: 175px;
+}
+
+.upcoming-subheading {
+  font-size: 32px;
+  color: #000;
+  line-height: 1.2;
+  margin-bottom: 5px;
+  margin-left: 175px;
+}
+.subcaption {
+  font-size: 20px;       /* smaller than caption */
+  font-weight: normal;   /* lighter weight */
+  color: #000;           /* same color */
+  text-align: left;
+  width: 465px;
+  margin-bottom: 40px;   /* spacing before next artwork */
+}
+
+.past-heading {
+  font-size: 48px;
+  font-weight: 900;
+  color: #23353F;
+  margin-bottom: 30px;
+margin-left: 175px;
+}
+
+.past-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%; /* space between text and images */
+  margin-bottom: 125px;
+}
+
+.past-text {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 125px; /* space between exhibition entries */
+  margin-left: 175px;
+}
+
+.past-images {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin-right: 175px;
+  gap: 40px; /* space between images */
+  text-align: right;
+}
+
+.past-text .artwork,
+.past-images .img-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centers content vertically */
+}
+
+
+.img-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.caption {
+  font-size: 32px;
+  font-weight: lighter;
+  color: #000;
+  text-align: left;
+  margin-bottom: 6px;
+}
+
+.subcaption {
+  font-size: 20px;
+  font-weight: normal;
+  color: #000;
+  text-align: left;
+  margin-right: 10px;
+}
+
+.thecollection-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 64px;       /* same as welcome header */
+  font-weight: 400;
+  color: #C1272D;        /* bold red */
+  margin: 0 0 20px 0;
+  margin-top: 50px;
+  line-height: 1.1;
+  margin-bottom: 10px;
+  margin-left: 175px;
+}
+
+.thecollection-text {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 28px;       /* same as tagline */
+  color: #000;
+  line-height: 1.1;
+  max-width: 900px;      /* keeps text aligned to left margin */
+  margin-bottom: 5px;
+  margin-left: 175px;
+}
+
+.collections-grid-section {
+  margin: 60px 0;
+}
+
+.collections-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-rows: repeat(3, auto);   /* 3 rows */
+  row-gap: 10px; 
+  column-gap: 10px;                            /* spacing between items */
+  width: 100%;                           /* full width */
+  margin: 175px 175px 0 0;                     /* flush with margins */
+  justify-content: start;
+}
+
+.collection-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.collection-item img {
+  
+  object-fit: cover; /* crops image to fit box without distortion */
+  display: block;
+  width: 500px;   /* fixed width */
+  height: 400px;
+}
+
+.collcaption {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 12px;
+  color: #000;
+  
+}
+
+.collsubcaption {
+  font-size: 20px;
+  color: #555;
+  
+}
+.water-image img {
+  display: block;
+  width: calc(100% - 450px); /* full width minus 175px left + right margin */
+  margin: 0 175px;           /* left/right margin */
+  height: 700px;
+  object-fit: cover;
+}
+
+.water-text {
+  margin-left: 175px; /* aligns text with image start */
+  width: 800px; 
+}
+
+/* Caption + subcaption styling (same as collections grid) */
+.caption {
+  font-size: 38px;
+  margin-top: 20px;
+  color: #000;
+  text-align: left;
+}
+
+.subcaption {
+  font-size: 30px;
+  color: #555;
+  text-align: left;
+  width: 800px;
+  margin-bottom: 40px;
+}
+
+.description {
+  font-size: 28px;   /* same as subcaption */
+  color: #555;       /* same color as subcaption */
+  text-align: left;
+  margin-top: 30px; 
+  margin-bottom: 100px;
+  width: 800px;
+}
+.collection-item a {
+  text-decoration: none;   /* removes the underline */
+  color: inherit;          /* keeps captions/subcaptions the same color */
+  display: inline-block;   /* makes the link wrap neatly around the image */
+}
+.collection-item a:hover img {
+  transform: scale(1.03);  /* subtle zoom on hover */
+}
+.aura-image img {
+  display: block;
+  width: calc(100% - 450px); /* full width minus 175px left + right margin */
+  margin: 0 175px;           /* left/right margin */
+  height: 700px;
+  object-fit: cover;
+}
+
+.aura-text {
+  margin-left: 175px; /* aligns text with image start */
+  width: 800px; 
+}
+.city-image img {
+  display: block;
+  width: calc(100% - 450px); /* full width minus 175px left + right margin */
+  margin: 0 175px;           /* left/right margin */
+  height: 700px;
+  object-fit: cover;
+}
+
+.city-text {
+  margin-left: 175px; /* aligns text with image start */
+  width: 800px; 
+}
+.faces-image img {
+  display: block;
+  width: calc(100% - 450px); /* full width minus 175px left + right margin */
+  margin: 0 175px;           /* left/right margin */
+  height: 700px;
+  object-fit: cover;
+}
+
+.faces-text {
+  margin-left: 175px; /* aligns text with image start */
+  width: 800px; 
+}
+.portrait-image img {
+  display: block;
+  width: calc(100% - 450px); /* full width minus 175px left + right margin */
+  margin: 0 175px;           /* left/right margin */
+  height: 700px;
+  object-fit: cover;
+}
+
+.portrait-text {
+  margin-left: 175px; /* aligns text with image start */
+  width: 800px; 
+}
+.swirl-image img {
+  display: block;
+  width: calc(100% - 450px); /* full width minus 175px left + right margin */
+  margin: 0 175px;           /* left/right margin */
+  height: 700px;
+  object-fit: cover;
+}
+
+.swirl-text {
+  margin-left: 175px; /* aligns text with image start */
+  width: 800px; 
+}
+
+.events-title{
+  font-family: 'DM Serif Display', serif;
+  font-size: 64px;       /* same as welcome header */
+  font-weight: 400;
+  color: #C1272D;        /* bold red */
+  margin: 0 0 20px 0;
+  margin-top: 50px;
+  line-height: 1.1;
+  margin-bottom: 10px;
+  margin-left: 175px;
+}
+
+.event-subtitle{
+   font-size: 32px;
+  color: #000;
+  line-height: 1.2;
+  margin-bottom: 5px;
+  margin-left: 175px;
+  margin-right: 175px;
+}
+
+.events-layout {
+  display: flex;
+  flex-direction: column; /* stack rows vertically */
+  gap: 60px;              /* spacing between rows */
+  margin-top: 60px;
+}
+
+.event-row {
+  display: flex;
+  justify-content: flex-start; /* text left, image right */
+  align-items: flex-start;
+  gap: 20px; /* space between text and image */
+}
+
+.event-text {
+  flex: 1;
+  margin-left: 175px; /* text takes available space */
+}
+
+.event-image img {
+  width: 400px;   /* smaller width */
+  height: 300px;  /* smaller height */
+  object-fit: cover; /* crop neatly without distortion */
+  margin-right: 175px;
+  margin-left: 50px;
+}
+
+.event-heading {
+  font-size: 46px;
+  font-weight: bold;
+  color: #23353F; /* same blue as past exhibitions heading */
+  margin-bottom: 8px;
+}
+
+.event-subheading {
+  font-size: 26px; /* same as visit-text */
+  color: #555;
+  line-height: 1.5;
+}
+
+.education-title{
+  font-family: 'DM Serif Display', serif;
+  font-size: 64px;       /* same as welcome header */
+  font-weight: 400;
+  color: #C1272D;        /* bold red */
+  margin: 0 0 20px 0;
+  margin-top: 50px;
+  line-height: 1.1;
+  margin-bottom: 10px;
+  margin-left: 175px;
+}
+
+.education-subtitle{
+   font-size: 32px;
+  color: #000;
+  line-height: 1.2;
+  margin-bottom: 5px;
+  margin-left: 175px;
+  margin-right: 175px;
+}
+
+.education-layout {
+  display: flex;
+  flex-direction: column; /* stack rows vertically */
+  gap: 60px;              /* spacing between rows */
+  margin-top: 60px;
+}
+
+.education-row {
+  display: flex;
+  justify-content: flex-start; /* text left, image right */
+  align-items: flex-start;
+  gap: 20px; /* space between text and image */
+}
+
+.education-text {
+  flex: 1;
+  margin-left: 175px; /* text takes available space */
+}
+
+.education-image img {
+  width: 400px;   /* smaller width */
+  height: 300px;  /* smaller height */
+  object-fit: cover; /* crop neatly without distortion */
+  margin-right: 175px;
+  margin-left: 50px;
+}
+
+.education-heading {
+  font-size: 46px;
+  font-weight: bold;
+  color: #23353F; /* same blue as past exhibitions heading */
+  margin-bottom: 8px;
+}
+
+.education-subheading {
+  font-size: 26px; /* same as visit-text */
+  color: #555;
+  line-height: 1.5;
+}
+
+.story-section-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px 170px;
+  padding-top: 30px;
+  gap: 60px;
+  margin-bottom: 90px;
+  margin-top: 0;
+}
+
+.story-text {
+  flex: 1;
+}
+
+.story-title {
+  font-size: 52px;
+  font-weight: 900;
+  color: #23353F;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.story-subheading {
+  font-size: 27px;
+  color: #000;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  width: 500px;
+}
+
+
+.story-image img{
+  width: 500px;
+  height: 450px;
+  object-fit: cover;
+  display: block;
+  margin-right: 100px;
+  margin-top: 100px;
+}
+
+.support-section-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 40px;              /* keeps columns close but distinct */
+}
+
+/* First column */
+.support-title {
+  font-size: 52px;        /* same as Location heading */
+  font-weight: 900;
+  color: #23353F;
+  line-height: 1.7;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  max-width: 800px;
+}
+
+.support-subheading {
+  font-size: 27px;        /* same as Location subheading */
+  color: #000;
+  line-height: 1.3;
+  margin-top: 20px;
+  max-width: 800px;
+}
+
+/* Third column (prices) */
+.support-ways p {
+  font-size: 27px;        /* same as subheading text */
+  color: #000;
+  line-height: -.1;
+  margin: 8px 0;
+  margin-left: 150px;
+  margin-top: 50px;
 }

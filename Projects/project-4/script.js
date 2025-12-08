@@ -1,34 +1,30 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const galleryRow = document.getElementById("galleryRow");
-  const scrollAmount = 300; // adjust to match your image width + gutter
+  const scrollAmount = 300;
 
-  // Helper functions
-  function atStart(el) {
-    return el.scrollLeft <= 0;
-  }
+  function atStart(el) { return el.scrollLeft <= 0; }
+  function atEnd(el) { return el.scrollLeft >= el.scrollWidth - el.clientWidth - 1; }
 
-  function atEnd(el) {
-    const maxLeft = el.scrollWidth - el.clientWidth;
-    return el.scrollLeft >= maxLeft - 1; // tolerance for rounding
-  }
+  document.querySelectorAll(".section-container").forEach(section => {
+    const gallery = section.querySelector(".scroll-gallery");
+    const leftBtn = section.querySelector(".gallery-nav .nav-btn:first-child");
+    const rightBtn = section.querySelector(".gallery-nav .nav-btn:last-child");
 
-  // Left button click
-  document.getElementById("scrollLeft").addEventListener("click", () => {
-    if (atStart(galleryRow)) {
-      // Loop back to end
-      galleryRow.scrollLeft = galleryRow.scrollWidth - galleryRow.clientWidth;
-    } else {
-      galleryRow.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-    }
-  });
+    if (gallery && leftBtn && rightBtn) {
+      leftBtn.addEventListener("click", () => {
+        if (atStart(gallery)) {
+          gallery.scrollLeft = gallery.scrollWidth - gallery.clientWidth;
+        } else {
+          gallery.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+        }
+      });
 
-  // Right button click
-  document.getElementById("scrollRight").addEventListener("click", () => {
-    if (atEnd(galleryRow)) {
-      // Loop back to start
-      galleryRow.scrollLeft = 0;
-    } else {
-      galleryRow.scrollBy({ left: scrollAmount, behavior: "smooth" });
+      rightBtn.addEventListener("click", () => {
+        if (atEnd(gallery)) {
+          gallery.scrollLeft = 0;
+        } else {
+          gallery.scrollBy({ left: scrollAmount, behavior: "smooth" });
+        }
+      });
     }
   });
 });
