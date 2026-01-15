@@ -7,17 +7,17 @@
 
   <body>
 
-    <a id="link1" href="#">Click Here</a>
+    <a id="link" href="#">Click Here</a>
 
     <h1 id="hello">Hello World</h1>
 
     <script>
-      const link1 = document.querySelector('#link1');
+      const link = document.querySelector('#link');
 
-      link1.onmouseup = () => {
+      link.onmouseup = () => {
         document.body.style.backgroundColor = 'lightyellow';
         document.querySelector('#hello').style.color = 'red';
-        document.querySelector('#link1').style.color = 'green';
+        document.querySelector('#link').style.color = 'green';
       };
     </script>
 
