@@ -38,18 +38,15 @@
       } else if (age >= 18 && age <= 64) {
         message = "You are an adult :)";
       } else if (age >= 65) {
-        message = "You are a senior.";
+        message = "You are a senior:).";
       } else {
         message = "Invalid age entered.";
       }
 
-      // REQUIRED BY ASSIGNMENT
       alert(message);
 
-      // Also show it on the page
       document.getElementById("ageOutput").innerHTML = message;
 
-      // Show rainbow AFTER age is verified
       showColors();
 
       return false;
