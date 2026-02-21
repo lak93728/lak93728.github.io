@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Which Color will You Get?</title>
+  <!-- got the animation from animate.css https://animate.style -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+
+  <h1>Multiply Two Numbers To Get A Color</h1>
+  <input type="number" id="num1" placeholder="Number 1">
+  <input type="number" id="num2" placeholder="Number 2">
+  <button id="calculateBtn">Calculate</button>
+  <p id="answer"></p>
+
+  <script>
+    const colors = ["lightblue", "lightgreen", "hotpink", "lightpink", "lavender"];
+    let colorIndex = 0;
+
+    function multiply(a, b) {
+      return a * b;
+    }
+
+    document.getElementById("calculateBtn").addEventListener("click", function() {
+      let num1 = parseFloat(document.getElementById("num1").value);
+      let num2 = parseFloat(document.getElementById("num2").value);
+      let result = multiply(num1, num2);
+
+      document.getElementById("answer").textContent = num1 + " x " + num2 + " = " + result;
+
+      // lets me through background colors each click
+      document.body.style.backgroundColor = colors[colorIndex];
+      colorIndex = (colorIndex + 1) % colors.length;
+
+      // once again got this from Animate.css (https://animate.style)
+      const answer = document.getElementById("answer");
+      answer.classList.remove("animate__animated", "animate__bounceIn");
+      void answer.offsetWidth;
+      answer.classList.add("animate__animated", "animate__bounceIn");
+    });
+  </script>
+
+</body>
+</html>
