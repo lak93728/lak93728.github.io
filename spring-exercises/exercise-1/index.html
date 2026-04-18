@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World</title>
+  </head>
+
+  <body>
+
+    <a id="link" href="#">Click Here</a>
+
+    <h1 id="hello">Hello World</h1>
+
+    <script>
+      const link = document.querySelector('#link');
+
+      link.onmouseup = () => {
+        document.body.style.backgroundColor = 'lightyellow';
+        document.querySelector('#hello').style.color = 'red';
+        document.querySelector('#link').style.color = 'green';
+      };
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 4</title>
+
+  <style>
+    .color-block {
+      width: 120px;
+      height: 40px;
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Exercise 4</h1>
+
+  <form id="ageForm">
+    <label for="age">Enter your age:</label>
+    <input id="age" type="number" required />
+    <input type="submit" value="Submit" />
+  </form>
+
+  <div id="ageOutput"></div>
+
+  <h2 id="colorsTitle" style="display:none;">Rainbow!!!</h2>
+  <div id="colorsOutput"></div>
+
+  <script>
+    document.getElementById("ageForm").onsubmit = function() {
+      const age = Number(document.getElementById("age").value);
+      let message = "";
+
+      if (age < 18) {
+        message = "You are a minor :P";
+      } else if (age >= 18 && age <= 64) {
+        message = "You are an adult :)";
+      } else if (age >= 65) {
+        message = "You are a senior:).";
+      } else {
+        message = "Invalid age entered.";
+      }
+
+      alert(message);
+
+      document.getElementById("ageOutput").innerHTML = message;
+
+      showColors();
+
+      return false;
+    };
+
+    function showColors() {
+      const colors = [
+        "#FF0000",
+        "#FF7F00",
+        "#FFFF00",
+        "#00FF00",
+        "#0000FF",
+        "#8A2BE2"
+      ];
+
+      const outputDiv = document.getElementById("colorsOutput");
+      const title = document.getElementById("colorsTitle");
+
+      title.style.display = "block";
+      outputDiv.innerHTML = "";
+
+      for (let i = 0; i < colors.length; i++) {
+        outputDiv.innerHTML += `
+          <div class="color-block" style="background:${colors[i]}"></div>
+        `;
+      }
+    }
+  </script>
+
+</body>
+</html>

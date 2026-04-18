@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms and Variables</title>
+    <style>
+      label,
+      input {
+        display: block;
+        margin-bottom: 0.5em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Forms and Variables</h1>
+    <form name="myForm">
+      <label for="name">Name:</label>
+      <input id="name" name="name" type="text" placeholder="Your Name" required /> <!--changed this so that the js will work-->
+
+            <!-- Create age and email fields -->
+      <label for="age">Age:</label>
+      <input id="age" name="age" type="number" placeholder="Your Age" required />
+
+      <label for="email">Email:</label>
+      <input id="email" name="email" type="email" placeholder="Your Email" required />
+
+      <input type="submit" value="Submit" /> <!--added this section for the form fields to work and submit-->
+    </form>
+    <div id="output"></div>
+    <script>
+      // Assign action to form when submitted
+      document.forms['myForm'].onsubmit = () => {
+        // retrieve submitted values
+        const name = document.forms['myForm']['name'].value;
+        const age = document.forms['myForm']['age'].value;
+        const email = document.forms['myForm']['email'].value; //works as the user types in their info//
+
+        // write name linked to an email, followed by the submigged age into output div
+        const outputDiv = document.getElementById('output');
+        outputDiv.innerHTML = `<a href="mailto:${email}">${name}</a>, ${age}`; //shows the info as a clickable linl//
+        
+        // don't actually submit the form to an action
+        return false;
+      };
+    </script>
+  </body>
+</html>
