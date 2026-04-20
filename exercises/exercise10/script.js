@@ -4,19 +4,16 @@ const container = document.getElementById('facts-container');
 button.addEventListener('click', () => {
   container.innerHTML = "<p>Loading...</p>";
 
-  fetch("https://catfact.ninja/facts?limit=10")
-    .then(response => response.json())
-    .then(data => {
-      const facts = data.data;
+  let cards = "";
 
-      container.innerHTML = facts.map(item => `
-        <div class="fact-card">
-          ${item.fact}
-        </div>
-      `).join("");
-    })
-    .catch(error => {
-      container.innerHTML = "<p>Error loading facts.</p>";
-      console.error(error);
-    });
+  for (let i = 0; i < 10; i++) {
+    const url = `https://cataas.com/cat?random=${Math.random()}`;
+    cards += `
+      <div class="fact-card">
+        <img src="${url}" alt="Random Cat" style="width:100%; border-radius:8px;">
+      </div>
+    `;
+  }
+
+  container.innerHTML = cards;
 });
